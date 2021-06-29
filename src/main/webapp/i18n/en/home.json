@@ -1,11 +1,24 @@
 {
   "home": {
-    "title": "Welcome, Java Hipster!",
-    "subtitle": "This is your homepage",
+    "title": "Welcome at DSI RC !",
+    "subtitle": "This is a demo showing a fullstack application, which skeleton has been generated with with JHipster.",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
     },
     "question": "If you have any question on JHipster:",
+    "text": "It consists in:",
+    "item1": "An Angular front-end with Bootstrap, HTML 5 and SASS.",
+    "item2": "A Spring Boot back-end exposing a fictitious PENSIONS domain, with all its required business objects, entities, services, DTO, converters, mappers and the other mandatory components.",
+    "item3": "A JWT based authentication and authorization security.",
+    "item4": "Front-end unit, integration and E2E tests with Jest and Protractor.",
+    "item5": "Back-end unit, integration and E2E tests with Junit, Gatling and Cucumber.",
+    "item6": "H2 and PostgreSQL databases.",
+    "item7": "Caching with Infinispan.",
+    "item8": "JPA persistence with Spring Data and Hibernate.",
+    "item9": "Data-model migration management with LiquidBase.",
+    "item10": "Use of SonarQube for the code quality management",
+    "item11": "Use of Docker to simplify the deployment",
+    "item12": "CI/CD",
     "link": {
       "homepage": "JHipster homepage",
       "stackoverflow": "JHipster on Stack Overflow",

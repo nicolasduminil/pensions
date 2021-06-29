@@ -4,9 +4,11 @@
   </div>
 
   <div class="col-md-9">
-    <h1 class="display-4"><span jhiTranslate="home.title">Welcome, Java Hipster!</span> (Pensions)</h1>
+    <h1 class="display-4"><span jhiTranslate="home.title">Welcome at DSI RC !</span></h1>
 
-    <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p>
+    <p class="lead" jhiTranslate="home.subtitle">
+      This is a demo showing a fullstack application, which skeleton has been generated with with JHipster.
+    </p>
 
     <div [ngSwitch]="account !== null">
       <div class="alert alert-success" *ngSwitchCase="true">
@@ -29,6 +31,49 @@
         <a class="alert-link" routerLink="account/register" jhiTranslate="global.messages.info.register.link">Register a new account</a>
       </div>
     </div>
+
+    <p jhiTranslate="home.text">It consists in:</p>
+    <ul>
+      <li>
+        <span jhiTranslate="home.item1">An Angular front-end with Bootstrap, HTML 5 and SASS</span>
+      </li>
+      <li>
+        <span jhiTranslate="home.item2"
+          >A Spring Boot back-end exposing a fictitious PENSIONS domain, with all its required business objects, entities, services, DTO,
+          converters, mappers and the other mandatory components.</span
+        >
+      </li>
+      <li>
+        <span jhiTranslate="home.item3">A JWT based authentication and authorization security.</span>
+      </li>
+      <li>
+        <span jhiTranslate="home.item4">Front-end unit, integration and E2E tests with Jest and Protractor.</span>
+      </li>
+      <li>
+        <span jhiTranslate="home.item5">Back-end unit, integration and E2E tests with Junit, Gatling and Cucumber.</span>
+      </li>
+      <li>
+        <span jhiTranslate="home.item6">H2 and PostgreSQL databases.</span>
+      </li>
+      <li>
+        <span jhiTranslate="home.item7">Caching with Infinispan</span>
+      </li>
+      <li>
+        <span jhiTranslate="home.item8">JPA persistence with Spring Data and Hibernate.</span>
+      </li>
+      <li>
+        <span jhiTranslate="home.item9">Data-model migration management with LiquidBase.</span>
+      </li>
+      <li>
+        <span jhiTranslate="home.item10">Use of SonarQube for the code quality management</span>
+      </li>
+      <li>
+        <span jhiTranslate="home.item11">Use of Docker to simplify the deployment</span>
+      </li>
+      <li>
+        <span jhiTranslate="home.item12">CI/CD</span>
+      </li>
+    </ul>
 
     <p jhiTranslate="home.question">If you have any question on JHipster:</p>
 
