@@ -63,5 +63,6 @@ relationship OneToMany {
    Recipient{contact} to Contact{recipient}
 }
 
-service * with serviceClass
+service * with serviceImpl
+dto * with mapstruct
 paginate Recipient, Pension, Payment with pagination
