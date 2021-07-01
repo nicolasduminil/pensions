@@ -1,0 +1,141 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-pension-heading" data-cy="PensionCreateUpdateHeading" jhiTranslate="pensionsApp.pension.home.createOrEditLabel">
+        Create or edit a Pension
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="pensionsApp.pension.pensionType" for="field_pensionType">Pension Type</label>
+          <select class="form-control" name="pensionType" formControlName="pensionType" id="field_pensionType" data-cy="pensionType">
+            <option [ngValue]="null">{{ 'pensionsApp.PensionType.null' | translate }}</option>
+            <option value="TYPE1">{{ 'pensionsApp.PensionType.TYPE1' | translate }}</option>
+            <option value="TYPE2">{{ 'pensionsApp.PensionType.TYPE2' | translate }}</option>
+            <option value="TYPE3">{{ 'pensionsApp.PensionType.TYPE3' | translate }}</option>
+          </select>
+          <div *ngIf="editForm.get('pensionType')!.invalid && (editForm.get('pensionType')!.dirty || editForm.get('pensionType')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('pensionType')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="pensionsApp.pension.startingDate" for="field_startingDate">Starting Date</label>
+          <div class="input-group">
+            <input
+              id="field_startingDate"
+              data-cy="startingDate"
+              type="text"
+              class="form-control"
+              name="startingDate"
+              ngbDatepicker
+              #startingDateDp="ngbDatepicker"
+              formControlName="startingDate"
+            />
+            <span class="input-group-append">
+              <button type="button" class="btn btn-secondary" (click)="startingDateDp.toggle()">
+                <fa-icon icon="calendar-alt"></fa-icon>
+              </button>
+            </span>
+          </div>
+          <div
+            *ngIf="editForm.get('startingDate')!.invalid && (editForm.get('startingDate')!.dirty || editForm.get('startingDate')!.touched)"
+          >
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('startingDate')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="pensionsApp.pension.paymentMethod" for="field_paymentMethod"
+            >Payment Method</label
+          >
+          <select
+            class="form-control"
+            name="paymentMethod"
+            formControlName="paymentMethod"
+            id="field_paymentMethod"
+            data-cy="paymentMethod"
+          >
+            <option [ngValue]="null">{{ 'pensionsApp.PaymentMethod.null' | translate }}</option>
+            <option value="BANK_TRANSFER">{{ 'pensionsApp.PaymentMethod.BANK_TRANSFER' | translate }}</option>
+            <option value="POSTAL_ORDER">{{ 'pensionsApp.PaymentMethod.POSTAL_ORDER' | translate }}</option>
+          </select>
+          <div
+            *ngIf="
+              editForm.get('paymentMethod')!.invalid && (editForm.get('paymentMethod')!.dirty || editForm.get('paymentMethod')!.touched)
+            "
+          >
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('paymentMethod')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="pensionsApp.pension.amount" for="field_amount">Amount</label>
+          <input type="number" class="form-control" name="amount" id="field_amount" data-cy="amount" formControlName="amount" />
+          <div *ngIf="editForm.get('amount')!.invalid && (editForm.get('amount')!.dirty || editForm.get('amount')!.touched)">
+            <small class="form-text text-danger" *ngIf="editForm.get('amount')?.errors?.required" jhiTranslate="entity.validation.required">
+              This field is required.
+            </small>
+            <small class="form-text text-danger" [hidden]="!editForm.get('amount')?.errors?.number" jhiTranslate="entity.validation.number">
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="pensionsApp.pension.recipient" for="field_recipient">Recipient</label>
+          <select class="form-control" id="field_recipient" data-cy="recipient" name="recipient" formControlName="recipient">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="recipientOption.id === editForm.get('recipient')!.value?.id ? editForm.get('recipient')!.value : recipientOption"
+              *ngFor="let recipientOption of recipientsCollection; trackBy: trackRecipientById"
+            >
+              {{ recipientOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

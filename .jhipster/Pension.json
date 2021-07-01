@@ -1,0 +1,47 @@
+{
+  "name": "Pension",
+  "fields": [
+    {
+      "fieldName": "pensionType",
+      "fieldType": "PensionType",
+      "fieldValues": "TYPE1,TYPE2,TYPE3",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "startingDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentMethod",
+      "fieldType": "PaymentMethod",
+      "fieldValues": "BANK_TRANSFER,POSTAL_ORDER",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "recipient",
+      "otherEntityRelationshipName": "pension",
+      "relationshipName": "recipient",
+      "ownerSide": true
+    }
+  ],
+  "javadoc": "Recipient Pension",
+  "entityTableName": "pension",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210629173038"
+}

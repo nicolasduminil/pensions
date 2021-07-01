@@ -1,0 +1,9 @@
+{
+  "pensionsApp": {
+    "PaymentMethod": {
+      "null": "",
+      "BANK_TRANSFER": "BANK_TRANSFER",
+      "POSTAL_ORDER": "POSTAL_ORDER"
+    }
+  }
+}

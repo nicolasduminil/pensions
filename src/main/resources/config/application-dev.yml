@@ -50,8 +50,8 @@ spring:
   mail:
     host: SMTP.orange.fr
     port: 465
-    username: nicolas.duminil
-    password: Tdkmdtc.0123
+    username: my-username
+    password: my-password
     protocol: smtp
     tls: true
     properties.mail.smtp:

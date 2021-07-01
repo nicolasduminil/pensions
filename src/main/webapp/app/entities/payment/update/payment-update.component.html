@@ -1,0 +1,121 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-payment-heading" data-cy="PaymentCreateUpdateHeading" jhiTranslate="pensionsApp.payment.home.createOrEditLabel">
+        Create or edit a Payment
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="pensionsApp.payment.paymentsStatus" for="field_paymentsStatus"
+            >Payments Status</label
+          >
+          <select
+            class="form-control"
+            name="paymentsStatus"
+            formControlName="paymentsStatus"
+            id="field_paymentsStatus"
+            data-cy="paymentsStatus"
+          >
+            <option [ngValue]="null">{{ 'pensionsApp.PaymentStatus.null' | translate }}</option>
+            <option value="COMPLETED">{{ 'pensionsApp.PaymentStatus.COMPLETED' | translate }}</option>
+            <option value="PENDING">{{ 'pensionsApp.PaymentStatus.PENDING' | translate }}</option>
+            <option value="CANCELLED">{{ 'pensionsApp.PaymentStatus.CANCELLED' | translate }}</option>
+          </select>
+          <div
+            *ngIf="
+              editForm.get('paymentsStatus')!.invalid && (editForm.get('paymentsStatus')!.dirty || editForm.get('paymentsStatus')!.touched)
+            "
+          >
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('paymentsStatus')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="pensionsApp.payment.paymentDate" for="field_paymentDate">Payment Date</label>
+          <div class="input-group">
+            <input
+              id="field_paymentDate"
+              data-cy="paymentDate"
+              type="text"
+              class="form-control"
+              name="paymentDate"
+              ngbDatepicker
+              #paymentDateDp="ngbDatepicker"
+              formControlName="paymentDate"
+            />
+            <span class="input-group-append">
+              <button type="button" class="btn btn-secondary" (click)="paymentDateDp.toggle()">
+                <fa-icon icon="calendar-alt"></fa-icon>
+              </button>
+            </span>
+          </div>
+          <div *ngIf="editForm.get('paymentDate')!.invalid && (editForm.get('paymentDate')!.dirty || editForm.get('paymentDate')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('paymentDate')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="pensionsApp.payment.pension" for="field_pension">Pension</label>
+          <select class="form-control" id="field_pension" data-cy="pension" name="pension" formControlName="pension">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="pensionOption.id === editForm.get('pension')!.value?.id ? editForm.get('pension')!.value : pensionOption"
+              *ngFor="let pensionOption of pensionsCollection; trackBy: trackPensionById"
+            >
+              {{ pensionOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="pensionsApp.payment.receipient" for="field_receipient">Receipient</label>
+          <select class="form-control" id="field_receipient" data-cy="receipient" name="receipient" formControlName="receipient">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="recipientOption.id === editForm.get('receipient')!.value?.id ? editForm.get('receipient')!.value : recipientOption"
+              *ngFor="let recipientOption of receipientsCollection; trackBy: trackRecipientById"
+            >
+              {{ recipientOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

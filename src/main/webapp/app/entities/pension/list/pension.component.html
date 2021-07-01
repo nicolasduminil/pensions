@@ -1,0 +1,118 @@
+<div>
+  <h2 id="page-heading" data-cy="PensionHeading">
+    <span jhiTranslate="pensionsApp.pension.home.title">Pensions</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadPage()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="pensionsApp.pension.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-pension"
+        [routerLink]="['/pension/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="pensionsApp.pension.home.createLabel"> Create a new Pension </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="pensions?.length === 0">
+    <span jhiTranslate="pensionsApp.pension.home.notFound">No pensions found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="pensions && pensions.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+          <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="pensionType">
+            <span jhiTranslate="pensionsApp.pension.pensionType">Pension Type</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="startingDate">
+            <span jhiTranslate="pensionsApp.pension.startingDate">Starting Date</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="paymentMethod">
+            <span jhiTranslate="pensionsApp.pension.paymentMethod">Payment Method</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="amount">
+            <span jhiTranslate="pensionsApp.pension.amount">Amount</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="recipient.id">
+            <span jhiTranslate="pensionsApp.pension.recipient">Recipient</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pension of pensions; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/pension', pension.id, 'view']">{{ pension.id }}</a>
+          </td>
+          <td jhiTranslate="{{ 'pensionsApp.PensionType.' + pension.pensionType }}">{{ pension.pensionType }}</td>
+          <td>{{ pension.startingDate | formatMediumDate }}</td>
+          <td jhiTranslate="{{ 'pensionsApp.PaymentMethod.' + pension.paymentMethod }}">{{ pension.paymentMethod }}</td>
+          <td>{{ pension.amount }}</td>
+          <td>
+            <div *ngIf="pension.recipient">
+              <a [routerLink]="['/recipient', pension.recipient?.id, 'view']">{{ pension.recipient?.id }}</a>
+            </div>
+          </td>
+          <td class="text-right">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/pension', pension.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/pension', pension.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(pension)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="pensions && pensions.length > 0">
+    <div class="row justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="row justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [(page)]="ngbPaginationPage"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="loadPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

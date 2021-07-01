@@ -1,0 +1,43 @@
+{
+  "name": "Payment",
+  "fields": [
+    {
+      "fieldName": "paymentsStatus",
+      "fieldType": "PaymentStatus",
+      "fieldValues": "COMPLETED,PENDING,CANCELLED",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "pension",
+      "otherEntityRelationshipName": "payment",
+      "relationshipName": "pension",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "recipient",
+      "otherEntityRelationshipName": "payment",
+      "relationshipName": "receipient",
+      "ownerSide": true
+    }
+  ],
+  "javadoc": "Pension Payment",
+  "entityTableName": "payment",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210629173039"
+}

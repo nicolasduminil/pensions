@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="contact">
+      <h2 data-cy="contactDetailsHeading"><span jhiTranslate="pensionsApp.contact.detail.title">Contact</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ contact.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="pensionsApp.contact.email">Email</span></dt>
+        <dd>
+          <span>{{ contact.email }}</span>
+        </dd>
+        <dt><span jhiTranslate="pensionsApp.contact.phone">Phone</span></dt>
+        <dd>
+          <span>{{ contact.phone }}</span>
+        </dd>
+        <dt><span jhiTranslate="pensionsApp.contact.recipient">Recipient</span></dt>
+        <dd>
+          <div *ngIf="contact.recipient">
+            <a [routerLink]="['/recipient', contact.recipient?.id, 'view']">{{ contact.recipient?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/contact', contact.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

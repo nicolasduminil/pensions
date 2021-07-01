@@ -1,0 +1,1633 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.dsirc.tests:pensions[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Pensions 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:copy-resources[m [1m(default-resources)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] Copying 4 resources
+[[1;34mINFO[m] Copying 31 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:resources[m [1m(default-resources)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] Copying 4 resources
+[[1;34mINFO[m] Copying 31 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M3:enforce[m [1m(enforce-versions)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M3:enforce[m [1m(enforce-dependencyConvergence)[m @ [36mpensions[0;1m ---[m
+[[1;33mWARNING[m] 
+Dependency convergence error for org.jboss.threads:jboss-threads:2.3.3.Final paths to dependency are:
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.infinispan:infinispan-core:12.1.4.Final
+    +-org.jboss.threads:jboss-threads:2.3.3.Final
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-undertow:2.4.7
+    +-io.undertow:undertow-core:2.2.8.Final
+      +-org.jboss.threads:jboss-threads:3.1.0.Final
+
+[[1;33mWARNING[m] 
+Dependency convergence error for net.java.dev.jna:jna:5.2.0 paths to dependency are:
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.testcontainers:postgresql:1.15.3
+    +-org.testcontainers:jdbc:1.15.3
+      +-org.testcontainers:database-commons:1.15.3
+        +-org.testcontainers:testcontainers:1.15.3
+          +-org.rnorth.visible-assertions:visible-assertions:2.1.2
+            +-net.java.dev.jna:jna:5.2.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.testcontainers:postgresql:1.15.3
+    +-org.testcontainers:jdbc:1.15.3
+      +-org.testcontainers:database-commons:1.15.3
+        +-org.testcontainers:testcontainers:1.15.3
+          +-com.github.docker-java:docker-java-transport-zerodep:3.2.8
+            +-net.java.dev.jna:jna:5.8.0
+
+[[1;33mWARNING[m] 
+Dependency convergence error for org.wildfly.common:wildfly-common:1.3.0.Final paths to dependency are:
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.infinispan:infinispan-core:12.1.4.Final
+    +-org.jboss.threads:jboss-threads:2.3.3.Final
+      +-org.wildfly.common:wildfly-common:1.3.0.Final
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-undertow:2.4.7
+    +-io.undertow:undertow-core:2.2.8.Final
+      +-org.jboss.xnio:xnio-api:3.8.0.Final
+        +-org.wildfly.common:wildfly-common:1.5.2.Final
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-undertow:2.4.7
+    +-io.undertow:undertow-core:2.2.8.Final
+      +-org.jboss.xnio:xnio-api:3.8.0.Final
+        +-org.wildfly.client:wildfly-client-config:1.0.1.Final
+          +-org.wildfly.common:wildfly-common:1.2.0.Final
+
+[[1;33mWARNING[m] 
+Dependency convergence error for org.apiguardian:apiguardian-api:1.1.0 paths to dependency are:
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-test:2.4.7
+    +-org.junit.jupiter:junit-jupiter:5.7.2
+      +-org.junit.jupiter:junit-jupiter-api:5.7.2
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-test:2.4.7
+    +-org.junit.jupiter:junit-jupiter:5.7.2
+      +-org.junit.jupiter:junit-jupiter-api:5.7.2
+        +-org.junit.platform:junit-platform-commons:1.7.2
+          +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-test:2.4.7
+    +-org.junit.jupiter:junit-jupiter:5.7.2
+      +-org.junit.jupiter:junit-jupiter-params:5.7.2
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-test:2.4.7
+    +-org.junit.jupiter:junit-jupiter:5.7.2
+      +-org.junit.jupiter:junit-jupiter-engine:5.7.2
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-com.tngtech.archunit:archunit-junit5-engine:0.19.0
+    +-com.tngtech.archunit:archunit-junit5-engine-api:0.19.0
+      +-org.junit.platform:junit-platform-engine:1.7.2
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.zalando:problem-spring-web:0.26.2
+    +-org.zalando:problem-violations:0.26.2
+      +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.zalando:problem-spring-web:0.26.2
+    +-org.zalando:problem-spring-common:0.26.2
+      +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.zalando:problem-spring-web:0.26.2
+    +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.zalando:problem-spring-web:0.26.2
+    +-org.zalando:faux-pas:0.8.0
+      +-org.apiguardian:apiguardian-api:1.0.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-org.apiguardian:apiguardian-api:1.1.1
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-io.cucumber:cucumber-core:6.10.4
+      +-io.cucumber:cucumber-expressions:10.3.0
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-io.cucumber:cucumber-core:6.10.4
+      +-io.cucumber:datatable:3.5.0
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-io.cucumber:cucumber-core:6.10.4
+      +-io.cucumber:cucumber-plugin:6.10.4
+        +-org.apiguardian:apiguardian-api:1.1.1
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-io.cucumber:cucumber-core:6.10.4
+      +-io.cucumber:docstring:6.10.4
+        +-org.apiguardian:apiguardian-api:1.1.1
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-io.cucumber:cucumber-core:6.10.4
+      +-org.apiguardian:apiguardian-api:1.1.1
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-java:6.10.4
+    +-org.apiguardian:apiguardian-api:1.1.1
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-spring:6.10.4
+    +-org.apiguardian:apiguardian-api:1.1.1
+
+[[1;33mWARNING[m] Rule 0: org.apache.maven.plugins.enforcer.DependencyConvergence failed with message:
+Failed while enforcing releasability. See above detailed error message.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(pre-unit-tests)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/nicolas/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/nicolas/IdeaProjects/pensions/target/jacoco.exec -Djava.security.egd=file:/dev/./urandom -Xmx256m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mproperties-maven-plugin:1.0.0:read-project-properties[m [1m(default)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 90 source files to /home/nicolas/IdeaProjects/pensions/target/classes
+[[1;34mINFO[m] /home/nicolas/IdeaProjects/pensions/src/main/java/com/dsirc/tests/config/CacheConfiguration.java: /home/nicolas/IdeaProjects/pensions/src/main/java/com/dsirc/tests/config/CacheConfiguration.java uses or overrides a deprecated API.
+[[1;34mINFO[m] /home/nicolas/IdeaProjects/pensions/src/main/java/com/dsirc/tests/config/CacheConfiguration.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:testResources[m [1m(default-testResources)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] Copying 8 resources
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 39 source files to /home/nicolas/IdeaProjects/pensions/target/test-classes
+[[1;34mINFO[m] /home/nicolas/IdeaProjects/pensions/src/test/java/com/dsirc/tests/service/MailServiceIT.java: /home/nicolas/IdeaProjects/pensions/src/test/java/com/dsirc/tests/service/MailServiceIT.java uses or overrides a deprecated API.
+[[1;34mINFO[m] /home/nicolas/IdeaProjects/pensions/src/test/java/com/dsirc/tests/service/MailServiceIT.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M5:test[m [1m(default-test)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+2021-07-01 16:15:19.529 DEBUG   --- [           main] com.tngtech.archunit.ArchConfiguration   : No configuration found in classpath at archunit.properties => Using default configuration
+[[1;34mINFO[m] Running com.dsirc.tests.[1mArchTest[m
+2021-07-01 16:15:20.465  INFO   --- [           main] com.tngtech.archunit.core.PluginLoader   : Detected Java version 11.0.10
+2021-07-01 16:15:20.474 DEBUG   --- [           main] com.tngtech.archunit.core.PluginLoader   : Current Java version is compatible to JAVA_9 => Loading Plugin com.tngtech.archunit.core.importer.ModuleImportPlugin
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.771 s - in com.dsirc.tests.[1mArchTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.config.[1mStaticResourcesWebConfigurerTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.049 s - in com.dsirc.tests.config.[1mStaticResourcesWebConfigurerTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.config.[1mWebConfigurerTest[m
+2021-07-01 16:15:30.550  INFO   --- [           main] com.dsirc.tests.config.WebConfigurer     : Web application configuration, using profiles: dev
+2021-07-01 16:15:30.600  INFO   --- [           main] com.dsirc.tests.config.WebConfigurer     : Web application fully configured
+2021-07-01 16:15:31.095 DEBUG   --- [           main] org.jboss.logging                        : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-07-01 16:15:31.942 DEBUG   --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.c.WebConfigurerTestController:
+	{GET [/api/test-cors]}: testCorsOnApiPath()
+	{GET [/test/test-cors]}: testCorsOnOtherPath()
+2021-07-01 16:15:33.659 DEBUG   --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.c.WebConfigurerTestController:
+	{GET [/api/test-cors]}: testCorsOnApiPath()
+	{GET [/test/test-cors]}: testCorsOnOtherPath()
+2021-07-01 16:15:33.691 DEBUG   --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.c.WebConfigurerTestController:
+	{GET [/api/test-cors]}: testCorsOnApiPath()
+	{GET [/test/test-cors]}: testCorsOnOtherPath()
+2021-07-01 16:15:33.706  INFO   --- [           main] com.dsirc.tests.config.WebConfigurer     : Web application configuration, using profiles: prod
+2021-07-01 16:15:33.707  INFO   --- [           main] com.dsirc.tests.config.WebConfigurer     : Web application fully configured
+2021-07-01 16:15:33.719 DEBUG   --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.c.WebConfigurerTestController:
+	{GET [/api/test-cors]}: testCorsOnApiPath()
+	{GET [/test/test-cors]}: testCorsOnOtherPath()
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.469 s - in com.dsirc.tests.config.[1mWebConfigurerTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.domain.[1mAddressTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 s - in com.dsirc.tests.domain.[1mAddressTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.domain.[1mContactTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in com.dsirc.tests.domain.[1mContactTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.domain.[1mPaymentTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.dsirc.tests.domain.[1mPaymentTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.domain.[1mPensionTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.dsirc.tests.domain.[1mPensionTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.domain.[1mRecipientTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.dsirc.tests.domain.[1mRecipientTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.security.[1mSecurityUtilsUnitTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.dsirc.tests.security.[1mSecurityUtilsUnitTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.security.jwt.[1mJWTFilterTest[m
+2021-07-01 16:15:34.058  INFO   --- [           main] c.d.tests.security.jwt.TokenProvider     : Invalid JWT token.
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.454 s - in com.dsirc.tests.security.jwt.[1mJWTFilterTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.security.jwt.[1mTokenProviderTest[m
+2021-07-01 16:15:34.423  INFO   --- [           main] c.d.tests.security.jwt.TokenProvider     : Invalid JWT token.
+2021-07-01 16:15:34.433  INFO   --- [           main] c.d.tests.security.jwt.TokenProvider     : Invalid JWT token.
+2021-07-01 16:15:34.441  INFO   --- [           main] c.d.tests.security.jwt.TokenProvider     : Invalid JWT token.
+2021-07-01 16:15:34.445  WARN   --- [           main] c.d.tests.security.jwt.TokenProvider     : Warning: the JWT key used is not Base64-encoded. We recommend using the `jhipster.security.authentication.jwt.base64-secret` key for optimum security.
+2021-07-01 16:15:34.466  INFO   --- [           main] c.d.tests.security.jwt.TokenProvider     : Invalid JWT token.
+2021-07-01 16:15:34.494  INFO   --- [           main] c.d.tests.security.jwt.TokenProvider     : Invalid JWT token.
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 s - in com.dsirc.tests.security.jwt.[1mTokenProviderTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.service.mapper.[1mUserMapperTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 s - in com.dsirc.tests.service.mapper.[1mUserMapperTest[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.[1mClientForwardControllerTest[m
+2021-07-01 16:15:34.636 DEBUG   --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.ClientForwardController:
+	{GET [/**/{path:[^\.]*}]}: forward()
+2021-07-01 16:15:34.637 DEBUG   --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.TestController:
+	{ [/test]}: test()
+2021-07-01 16:15:34.660 DEBUG   --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.ClientForwardController:
+	{GET [/**/{path:[^\.]*}]}: forward()
+2021-07-01 16:15:34.669 DEBUG   --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.TestController:
+	{ [/test]}: test()
+2021-07-01 16:15:34.691 DEBUG   --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.ClientForwardController:
+	{GET [/**/{path:[^\.]*}]}: forward()
+2021-07-01 16:15:34.693 DEBUG   --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.TestController:
+	{ [/test]}: test()
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.118 s - in com.dsirc.tests.web.rest.[1mClientForwardControllerTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 45, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:report[m [1m(post-unit-test)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /home/nicolas/IdeaProjects/pensions/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Pensions' with 80 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:copy-resources[m [1m(default-resources)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] Copying 4 resources
+[[1;34mINFO[m] Copying 31 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:resources[m [1m(default-resources)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] Copying 4 resources
+[[1;34mINFO[m] Copying 31 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M3:enforce[m [1m(enforce-versions)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M3:enforce[m [1m(enforce-dependencyConvergence)[m @ [36mpensions[0;1m ---[m
+[[1;33mWARNING[m] 
+Dependency convergence error for org.jboss.threads:jboss-threads:2.3.3.Final paths to dependency are:
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.infinispan:infinispan-core:12.1.4.Final
+    +-org.jboss.threads:jboss-threads:2.3.3.Final
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-undertow:2.4.7
+    +-io.undertow:undertow-core:2.2.8.Final
+      +-org.jboss.threads:jboss-threads:3.1.0.Final
+
+[[1;33mWARNING[m] 
+Dependency convergence error for net.java.dev.jna:jna:5.2.0 paths to dependency are:
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.testcontainers:postgresql:1.15.3
+    +-org.testcontainers:jdbc:1.15.3
+      +-org.testcontainers:database-commons:1.15.3
+        +-org.testcontainers:testcontainers:1.15.3
+          +-org.rnorth.visible-assertions:visible-assertions:2.1.2
+            +-net.java.dev.jna:jna:5.2.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.testcontainers:postgresql:1.15.3
+    +-org.testcontainers:jdbc:1.15.3
+      +-org.testcontainers:database-commons:1.15.3
+        +-org.testcontainers:testcontainers:1.15.3
+          +-com.github.docker-java:docker-java-transport-zerodep:3.2.8
+            +-net.java.dev.jna:jna:5.8.0
+
+[[1;33mWARNING[m] 
+Dependency convergence error for org.wildfly.common:wildfly-common:1.3.0.Final paths to dependency are:
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.infinispan:infinispan-core:12.1.4.Final
+    +-org.jboss.threads:jboss-threads:2.3.3.Final
+      +-org.wildfly.common:wildfly-common:1.3.0.Final
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-undertow:2.4.7
+    +-io.undertow:undertow-core:2.2.8.Final
+      +-org.jboss.xnio:xnio-api:3.8.0.Final
+        +-org.wildfly.common:wildfly-common:1.5.2.Final
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-undertow:2.4.7
+    +-io.undertow:undertow-core:2.2.8.Final
+      +-org.jboss.xnio:xnio-api:3.8.0.Final
+        +-org.wildfly.client:wildfly-client-config:1.0.1.Final
+          +-org.wildfly.common:wildfly-common:1.2.0.Final
+
+[[1;33mWARNING[m] 
+Dependency convergence error for org.apiguardian:apiguardian-api:1.1.0 paths to dependency are:
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-test:2.4.7
+    +-org.junit.jupiter:junit-jupiter:5.7.2
+      +-org.junit.jupiter:junit-jupiter-api:5.7.2
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-test:2.4.7
+    +-org.junit.jupiter:junit-jupiter:5.7.2
+      +-org.junit.jupiter:junit-jupiter-api:5.7.2
+        +-org.junit.platform:junit-platform-commons:1.7.2
+          +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-test:2.4.7
+    +-org.junit.jupiter:junit-jupiter:5.7.2
+      +-org.junit.jupiter:junit-jupiter-params:5.7.2
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.springframework.boot:spring-boot-starter-test:2.4.7
+    +-org.junit.jupiter:junit-jupiter:5.7.2
+      +-org.junit.jupiter:junit-jupiter-engine:5.7.2
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-com.tngtech.archunit:archunit-junit5-engine:0.19.0
+    +-com.tngtech.archunit:archunit-junit5-engine-api:0.19.0
+      +-org.junit.platform:junit-platform-engine:1.7.2
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.zalando:problem-spring-web:0.26.2
+    +-org.zalando:problem-violations:0.26.2
+      +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.zalando:problem-spring-web:0.26.2
+    +-org.zalando:problem-spring-common:0.26.2
+      +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.zalando:problem-spring-web:0.26.2
+    +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-org.zalando:problem-spring-web:0.26.2
+    +-org.zalando:faux-pas:0.8.0
+      +-org.apiguardian:apiguardian-api:1.0.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-org.apiguardian:apiguardian-api:1.1.1
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-io.cucumber:cucumber-core:6.10.4
+      +-io.cucumber:cucumber-expressions:10.3.0
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-io.cucumber:cucumber-core:6.10.4
+      +-io.cucumber:datatable:3.5.0
+        +-org.apiguardian:apiguardian-api:1.1.0
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-io.cucumber:cucumber-core:6.10.4
+      +-io.cucumber:cucumber-plugin:6.10.4
+        +-org.apiguardian:apiguardian-api:1.1.1
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-io.cucumber:cucumber-core:6.10.4
+      +-io.cucumber:docstring:6.10.4
+        +-org.apiguardian:apiguardian-api:1.1.1
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-junit:6.10.4
+    +-io.cucumber:cucumber-core:6.10.4
+      +-org.apiguardian:apiguardian-api:1.1.1
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-java:6.10.4
+    +-org.apiguardian:apiguardian-api:1.1.1
+and
++-com.dsirc.tests:pensions:0.0.1-SNAPSHOT
+  +-io.cucumber:cucumber-spring:6.10.4
+    +-org.apiguardian:apiguardian-api:1.1.1
+
+[[1;33mWARNING[m] Rule 0: org.apache.maven.plugins.enforcer.DependencyConvergence failed with message:
+Failed while enforcing releasability. See above detailed error message.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(pre-unit-tests)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/nicolas/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/nicolas/IdeaProjects/pensions/target/jacoco.exec -Djava.security.egd=file:/dev/./urandom -Xmx256m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mproperties-maven-plugin:1.0.0:read-project-properties[m [1m(default)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 90 source files to /home/nicolas/IdeaProjects/pensions/target/classes
+[[1;34mINFO[m] /home/nicolas/IdeaProjects/pensions/src/main/java/com/dsirc/tests/config/CacheConfiguration.java: /home/nicolas/IdeaProjects/pensions/src/main/java/com/dsirc/tests/config/CacheConfiguration.java uses or overrides a deprecated API.
+[[1;34mINFO[m] /home/nicolas/IdeaProjects/pensions/src/main/java/com/dsirc/tests/config/CacheConfiguration.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:testResources[m [1m(default-testResources)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] Copying 8 resources
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 39 source files to /home/nicolas/IdeaProjects/pensions/target/test-classes
+[[1;34mINFO[m] /home/nicolas/IdeaProjects/pensions/src/test/java/com/dsirc/tests/service/MailServiceIT.java: /home/nicolas/IdeaProjects/pensions/src/test/java/com/dsirc/tests/service/MailServiceIT.java uses or overrides a deprecated API.
+[[1;34mINFO[m] /home/nicolas/IdeaProjects/pensions/src/test/java/com/dsirc/tests/service/MailServiceIT.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M5:test[m [1m(default-test)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Skipping execution of surefire because it has already been run for this configuration
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:report[m [1m(post-unit-test)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /home/nicolas/IdeaProjects/pensions/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'Pensions' with 80 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Building jar: /home/nicolas/IdeaProjects/pensions/target/pensions-0.0.1-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.7:repackage[m [1m(default)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Replacing main artifact with repackaged archive
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent-integration[m [1m(pre-integration-tests)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/nicolas/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/nicolas/IdeaProjects/pensions/target/jacoco-it.exec -Djava.security.egd=file:/dev/./urandom -Xmx256m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-failsafe-plugin:3.0.0-M5:integration-test[m [1m(integration-test)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+2021-07-01 16:15:53.388 DEBUG   --- [           main] com.tngtech.archunit.ArchConfiguration   : No configuration found in classpath at archunit.properties => Using default configuration
+[[1;34mINFO[m] Running com.dsirc.tests.config.timezone.[1mHibernateTimeZoneIT[m
+
+        ██╗ ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
+        ██║ ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
+        ██║ ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
+  ██╗   ██║ ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
+  ╚██████╔╝ ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
+   ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+
+:: JHipster 🤓  :: Running Spring Boot 2.4.7 ::
+:: https://www.jhipster.tech ::
+
+2021-07-01 16:15:58.747 DEBUG 8077 --- [kground-preinit] org.jboss.logging                        : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-07-01 16:15:58.839  INFO 8077 --- [           main] c.d.t.c.timezone.HibernateTimeZoneIT     : Starting HibernateTimeZoneIT using Java 11.0.10 on nicolas-XPS-13-9360 with PID 8077 (started by nicolas in /home/nicolas/IdeaProjects/pensions)
+2021-07-01 16:15:58.854  INFO 8077 --- [           main] c.d.t.c.timezone.HibernateTimeZoneIT     : No active profile set, falling back to default profiles: default
+2021-07-01 16:15:59.153  WARN 8077 --- [           main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [config/application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [config/application.yml] - 17:12]
+Skipping auto-registration
+2021-07-01 16:16:17.428  WARN 8077 --- [           main] liquibase.hub                            : Skipping auto-registration
+2021-07-01 16:16:18.034  WARN 8077 --- [           main] t.j.c.liquibase.AsyncSpringLiquibase     : Warning, Liquibase took more than 5 seconds to start up!
+2021-07-01 16:16:18.575  INFO 8077 --- [           main] c.dsirc.tests.config.CacheConfiguration  : Defining app-data for local, replicated and distributed modes configuration
+2021-07-01 16:16:18.594  INFO 8077 --- [           main] c.dsirc.tests.config.CacheConfiguration  : Defining Infinispan Global Configuration
+2021-07-01 16:16:23.118  WARN 8077 --- [           main] org.infinispan.PERSISTENCE               : ISPN000554: jboss-marshalling is deprecated and planned for removal
+2021-07-01 16:16:26.253  WARN 8077 --- [           main] org.jgroups.stack.Configurator           : JGRP000014: STABLE.stability_delay has been deprecated: always 0
+2021-07-01 16:16:26.283 DEBUG 8077 --- [           main] org.jgroups.stack.Configurator           : set property TCP.diagnostics_addr to default value /224.0.75.75
+2021-07-01 16:16:26.308 DEBUG 8077 --- [           main] org.jgroups.protocols.TCP                : thread pool min/max/keep-alive: 0/200/60000 use_fork_join=false, internal pool: 0/4/30000 (4 cores available)
+2021-07-01 16:16:26.325 DEBUG 8077 --- [           main] org.jgroups.protocols.MPING              : bind_addr=/192.168.1.17, mcast_addr=/228.6.7.8, mcast_port=46655
+2021-07-01 16:16:26.407 DEBUG 8077 --- [           main] org.jgroups.protocols.MPING              : receiver thread started
+2021-07-01 16:16:26.443 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.GMS         : address=nicolas-XPS-13-9360-21478, cluster=infinispan-pensions-cluster, physical address=192.168.1.17:7801
+2021-07-01 16:16:26.554 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.GMS         : nicolas-XPS-13-9360-21478: sending JOIN(nicolas-XPS-13-9360-21478) to nicolas-XPS-13-9360-13001
+2021-07-01 16:16:26.652 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.NAKACK2     : 
+[nicolas-XPS-13-9360-21478 setDigest()]
+existing digest:  []
+new digest:       nicolas-XPS-13-9360-13001: [27 (27)], nicolas-XPS-13-9360-21478: [0 (0)]
+resulting digest: nicolas-XPS-13-9360-13001: [27 (27)], nicolas-XPS-13-9360-21478: [0 (0)]
+2021-07-01 16:16:26.655 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.GMS         : nicolas-XPS-13-9360-21478: installing view [nicolas-XPS-13-9360-13001|1] (2) [nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478] ([nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478] joined)
+2021-07-01 16:16:26.715 DEBUG 8077 --- [S-13-9360-21478] org.jgroups.protocols.FD_SOCK            : nicolas-XPS-13-9360-21478: pingable_mbrs=[nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478], ping_dest=nicolas-XPS-13-9360-13001
+2021-07-01 16:16:41.411 DEBUG 8077 --- [           main] i.m.c.u.i.logging.InternalLoggerFactory  : Using SLF4J as the default logging framework
+2021-07-01 16:16:49.337 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.c.WebConfigurerTestController:
+	{GET [/api/test-cors]}: testCorsOnApiPath()
+	{GET [/test/test-cors]}: testCorsOnOtherPath()
+2021-07-01 16:16:49.344 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.e.ExceptionTranslatorTestController:
+	{GET [/api/exception-translator-test/unauthorized]}: unauthorized()
+	{GET [/api/exception-translator-test/access-denied]}: accessdenied()
+	{GET [/api/exception-translator-test/missing-servlet-request-part]}: missingServletRequestPartException(String)
+	{GET [/api/exception-translator-test/response-status]}: exceptionWithResponseStatus()
+	{GET [/api/exception-translator-test/internal-server-error]}: internalServerError()
+	{GET [/api/exception-translator-test/missing-servlet-request-parameter]}: missingServletRequestParameterException(String)
+	{GET [/api/exception-translator-test/concurrency-failure]}: concurrencyFailure()
+	{POST [/api/exception-translator-test/method-argument]}: methodArgument(TestDTO)
+2021-07-01 16:16:49.368 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.AccountResource:
+	{POST [/api/account/change-password]}: changePassword(PasswordChangeDTO)
+	{POST [/api/account/reset-password/init]}: requestPasswordReset(String)
+	{POST [/api/register]}: registerAccount(ManagedUserVM)
+	{GET [/api/activate]}: activateAccount(String)
+	{GET [/api/authenticate]}: isAuthenticated(HttpServletRequest)
+	{GET [/api/account]}: getAccount()
+	{POST [/api/account]}: saveAccount(AdminUserDTO)
+	{POST [/api/account/reset-password/finish]}: finishPasswordReset(KeyAndPasswordVM)
+2021-07-01 16:16:49.390 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.AddressResource:
+	{PUT [/api/addresses/{id}]}: updateAddress(Long,Address)
+	{PATCH [/api/addresses/{id}], consumes [application/merge-patch+json]}: partialUpdateAddress(Long,Address)
+	{POST [/api/addresses]}: createAddress(Address)
+	{GET [/api/addresses]}: getAllAddresses()
+	{DELETE [/api/addresses/{id}]}: deleteAddress(Long)
+	{GET [/api/addresses/{id}]}: getAddress(Long)
+2021-07-01 16:16:49.405 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.ClientForwardController:
+	{GET [/**/{path:[^\.]*}]}: forward()
+2021-07-01 16:16:49.414 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.ContactResource:
+	{PATCH [/api/contacts/{id}], consumes [application/merge-patch+json]}: partialUpdateContact(Long,Contact)
+	{PUT [/api/contacts/{id}]}: updateContact(Long,Contact)
+	{POST [/api/contacts]}: createContact(Contact)
+	{GET [/api/contacts]}: getAllContacts()
+	{GET [/api/contacts/{id}]}: getContact(Long)
+	{DELETE [/api/contacts/{id}]}: deleteContact(Long)
+2021-07-01 16:16:49.425 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.PaymentResource:
+	{PATCH [/api/payments/{id}], consumes [application/merge-patch+json]}: partialUpdatePayment(Long,Payment)
+	{PUT [/api/payments/{id}]}: updatePayment(Long,Payment)
+	{POST [/api/payments]}: createPayment(Payment)
+	{GET [/api/payments]}: getAllPayments(Pageable)
+	{GET [/api/payments/{id}]}: getPayment(Long)
+	{DELETE [/api/payments/{id}]}: deletePayment(Long)
+2021-07-01 16:16:49.436 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.PensionResource:
+	{PATCH [/api/pensions/{id}], consumes [application/merge-patch+json]}: partialUpdatePension(Long,Pension)
+	{PUT [/api/pensions/{id}]}: updatePension(Long,Pension)
+	{GET [/api/pensions/{id}]}: getPension(Long)
+	{POST [/api/pensions]}: createPension(Pension)
+	{GET [/api/pensions]}: getAllPensions(Pageable)
+	{DELETE [/api/pensions/{id}]}: deletePension(Long)
+2021-07-01 16:16:49.439 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.PublicUserResource:
+	{GET [/api/authorities]}: getAuthorities()
+	{GET [/api/users]}: getAllPublicUsers(Pageable)
+2021-07-01 16:16:49.442 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.RecipientResource:
+	{PATCH [/api/recipients/{id}], consumes [application/merge-patch+json]}: partialUpdateRecipient(Long,Recipient)
+	{PUT [/api/recipients/{id}]}: updateRecipient(Long,Recipient)
+	{POST [/api/recipients]}: createRecipient(Recipient)
+	{GET [/api/recipients]}: getAllRecipients(Pageable,String)
+	{DELETE [/api/recipients/{id}]}: deleteRecipient(Long)
+	{GET [/api/recipients/{id}]}: getRecipient(Long)
+2021-07-01 16:16:49.443 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.UserJWTController:
+	{POST [/api/authenticate]}: authorize(LoginVM)
+2021-07-01 16:16:49.446 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.UserResource:
+	{POST [/api/admin/users]}: createUser(AdminUserDTO)
+	{GET [/api/admin/users]}: getAllUsers(Pageable)
+	{GET [/api/admin/users/{login}]}: getUser(String)
+	{PUT [/api/admin/users]}: updateUser(AdminUserDTO)
+	{DELETE [/api/admin/users/{login}]}: deleteUser(String)
+2021-07-01 16:16:49.449 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2021-07-01 16:16:49.533 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 'beanNameHandlerMapping' {}
+2021-07-01 16:16:49.616 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]}
+2021-07-01 16:16:52.509  INFO 8077 --- [           main] c.d.t.c.timezone.HibernateTimeZoneIT     : Started HibernateTimeZoneIT in 55.5 seconds (JVM running for 63.172)
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 58.012 s - in com.dsirc.tests.config.timezone.[1mHibernateTimeZoneIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.security.[1mDomainUserDetailsServiceIT[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.752 s - in com.dsirc.tests.security.[1mDomainUserDetailsServiceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.service.[1mMailServiceIT[m
+2021-07-01 16:16:57.349  WARN 8077 --- [           main] com.dsirc.tests.service.MailService      : Email could not be sent to user 'john.doe@example.com'
+
+org.springframework.mail.MailSendException: null
+
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.116 s - in com.dsirc.tests.service.[1mMailServiceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.service.[1mUserServiceIT[m
+
+        ██╗ ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
+        ██║ ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
+        ██║ ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
+  ██╗   ██║ ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
+  ╚██████╔╝ ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
+   ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+
+:: JHipster 🤓  :: Running Spring Boot 2.4.7 ::
+:: https://www.jhipster.tech ::
+
+2021-07-01 16:16:57.762  INFO 8077 --- [           main] com.dsirc.tests.service.UserServiceIT    : Starting UserServiceIT using Java 11.0.10 on nicolas-XPS-13-9360 with PID 8077 (started by nicolas in /home/nicolas/IdeaProjects/pensions)
+2021-07-01 16:16:57.774  INFO 8077 --- [           main] com.dsirc.tests.service.UserServiceIT    : No active profile set, falling back to default profiles: default
+2021-07-01 16:16:57.781  WARN 8077 --- [           main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [config/application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [config/application.yml] - 17:12]
+Skipping auto-registration
+2021-07-01 16:17:01.106  WARN 8077 --- [           main] liquibase.hub                            : Skipping auto-registration
+2021-07-01 16:17:01.305  INFO 8077 --- [           main] c.dsirc.tests.config.CacheConfiguration  : Defining app-data for local, replicated and distributed modes configuration
+2021-07-01 16:17:01.327  INFO 8077 --- [           main] c.dsirc.tests.config.CacheConfiguration  : Defining Infinispan Global Configuration
+2021-07-01 16:17:01.467  WARN 8077 --- [           main] org.infinispan.PERSISTENCE               : ISPN000554: jboss-marshalling is deprecated and planned for removal
+2021-07-01 16:17:01.551  WARN 8077 --- [           main] org.jgroups.stack.Configurator           : JGRP000014: STABLE.stability_delay has been deprecated: always 0
+2021-07-01 16:17:01.553 DEBUG 8077 --- [           main] org.jgroups.stack.Configurator           : set property TCP.diagnostics_addr to default value /224.0.75.75
+2021-07-01 16:17:01.574 DEBUG 8077 --- [           main] org.jgroups.protocols.TCP                : thread pool min/max/keep-alive: 0/200/60000 use_fork_join=false, internal pool: 0/4/30000 (4 cores available)
+2021-07-01 16:17:01.574 DEBUG 8077 --- [           main] org.jgroups.protocols.MPING              : bind_addr=/192.168.1.17, mcast_addr=/228.6.7.8, mcast_port=46655
+2021-07-01 16:17:01.600 DEBUG 8077 --- [           main] org.jgroups.protocols.MPING              : receiver thread started
+2021-07-01 16:17:01.604 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.GMS         : address=nicolas-XPS-13-9360-56176, cluster=infinispan-pensions-cluster, physical address=192.168.1.17:7802
+2021-07-01 16:17:01.654 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.GMS         : nicolas-XPS-13-9360-56176: sending JOIN(nicolas-XPS-13-9360-56176) to nicolas-XPS-13-9360-13001
+2021-07-01 16:17:01.670 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.NAKACK2     : 
+[nicolas-XPS-13-9360-56176 setDigest()]
+existing digest:  []
+new digest:       nicolas-XPS-13-9360-13001: [45 (45)], nicolas-XPS-13-9360-21478: [5 (5)], nicolas-XPS-13-9360-56176: [0 (0)]
+resulting digest: nicolas-XPS-13-9360-13001: [45 (45)], nicolas-XPS-13-9360-21478: [5 (5)], nicolas-XPS-13-9360-56176: [0 (0)]
+2021-07-01 16:17:01.671 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.GMS         : nicolas-XPS-13-9360-56176: installing view [nicolas-XPS-13-9360-13001|2] (3) [nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176] ([nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176] joined)
+2021-07-01 16:17:01.676 DEBUG 8077 --- [S-13-9360-21478] org.jgroups.protocols.pbcast.GMS         : nicolas-XPS-13-9360-21478: installing view [nicolas-XPS-13-9360-13001|2] (3) [nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176] (nicolas-XPS-13-9360-56176 joined)
+2021-07-01 16:17:01.765 DEBUG 8077 --- [S-13-9360-21478] org.jgroups.protocols.FD_SOCK            : nicolas-XPS-13-9360-21478: socket to nicolas-XPS-13-9360-13001 was closed gracefully
+2021-07-01 16:17:01.766 DEBUG 8077 --- [S-13-9360-21478] org.jgroups.protocols.FD_SOCK            : nicolas-XPS-13-9360-21478: pingable_mbrs=[nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176], ping_dest=nicolas-XPS-13-9360-56176
+2021-07-01 16:17:01.795 DEBUG 8077 --- [S-13-9360-56176] org.jgroups.protocols.FD_SOCK            : nicolas-XPS-13-9360-56176: pingable_mbrs=[nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176], ping_dest=nicolas-XPS-13-9360-13001
+2021-07-01 16:17:05.619 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.c.WebConfigurerTestController:
+	{GET [/api/test-cors]}: testCorsOnApiPath()
+	{GET [/test/test-cors]}: testCorsOnOtherPath()
+2021-07-01 16:17:05.622 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.e.ExceptionTranslatorTestController:
+	{GET [/api/exception-translator-test/unauthorized]}: unauthorized()
+	{GET [/api/exception-translator-test/access-denied]}: accessdenied()
+	{GET [/api/exception-translator-test/missing-servlet-request-part]}: missingServletRequestPartException(String)
+	{GET [/api/exception-translator-test/response-status]}: exceptionWithResponseStatus()
+	{GET [/api/exception-translator-test/internal-server-error]}: internalServerError()
+	{GET [/api/exception-translator-test/missing-servlet-request-parameter]}: missingServletRequestParameterException(String)
+	{GET [/api/exception-translator-test/concurrency-failure]}: concurrencyFailure()
+	{POST [/api/exception-translator-test/method-argument]}: methodArgument(TestDTO)
+2021-07-01 16:17:05.630 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.AccountResource:
+	{POST [/api/account/change-password]}: changePassword(PasswordChangeDTO)
+	{POST [/api/account/reset-password/init]}: requestPasswordReset(String)
+	{POST [/api/register]}: registerAccount(ManagedUserVM)
+	{GET [/api/activate]}: activateAccount(String)
+	{GET [/api/authenticate]}: isAuthenticated(HttpServletRequest)
+	{GET [/api/account]}: getAccount()
+	{POST [/api/account]}: saveAccount(AdminUserDTO)
+	{POST [/api/account/reset-password/finish]}: finishPasswordReset(KeyAndPasswordVM)
+2021-07-01 16:17:05.635 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.AddressResource:
+	{PUT [/api/addresses/{id}]}: updateAddress(Long,Address)
+	{PATCH [/api/addresses/{id}], consumes [application/merge-patch+json]}: partialUpdateAddress(Long,Address)
+	{POST [/api/addresses]}: createAddress(Address)
+	{GET [/api/addresses]}: getAllAddresses()
+	{DELETE [/api/addresses/{id}]}: deleteAddress(Long)
+	{GET [/api/addresses/{id}]}: getAddress(Long)
+2021-07-01 16:17:05.636 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.ClientForwardController:
+	{GET [/**/{path:[^\.]*}]}: forward()
+2021-07-01 16:17:05.638 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.ContactResource:
+	{PATCH [/api/contacts/{id}], consumes [application/merge-patch+json]}: partialUpdateContact(Long,Contact)
+	{PUT [/api/contacts/{id}]}: updateContact(Long,Contact)
+	{POST [/api/contacts]}: createContact(Contact)
+	{GET [/api/contacts]}: getAllContacts()
+	{GET [/api/contacts/{id}]}: getContact(Long)
+	{DELETE [/api/contacts/{id}]}: deleteContact(Long)
+2021-07-01 16:17:05.641 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.PaymentResource:
+	{PATCH [/api/payments/{id}], consumes [application/merge-patch+json]}: partialUpdatePayment(Long,Payment)
+	{PUT [/api/payments/{id}]}: updatePayment(Long,Payment)
+	{POST [/api/payments]}: createPayment(Payment)
+	{GET [/api/payments]}: getAllPayments(Pageable)
+	{GET [/api/payments/{id}]}: getPayment(Long)
+	{DELETE [/api/payments/{id}]}: deletePayment(Long)
+2021-07-01 16:17:05.643 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.PensionResource:
+	{PATCH [/api/pensions/{id}], consumes [application/merge-patch+json]}: partialUpdatePension(Long,Pension)
+	{PUT [/api/pensions/{id}]}: updatePension(Long,Pension)
+	{GET [/api/pensions/{id}]}: getPension(Long)
+	{POST [/api/pensions]}: createPension(Pension)
+	{GET [/api/pensions]}: getAllPensions(Pageable)
+	{DELETE [/api/pensions/{id}]}: deletePension(Long)
+2021-07-01 16:17:05.648 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.PublicUserResource:
+	{GET [/api/authorities]}: getAuthorities()
+	{GET [/api/users]}: getAllPublicUsers(Pageable)
+2021-07-01 16:17:05.651 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.RecipientResource:
+	{PATCH [/api/recipients/{id}], consumes [application/merge-patch+json]}: partialUpdateRecipient(Long,Recipient)
+	{PUT [/api/recipients/{id}]}: updateRecipient(Long,Recipient)
+	{POST [/api/recipients]}: createRecipient(Recipient)
+	{GET [/api/recipients]}: getAllRecipients(Pageable,String)
+	{DELETE [/api/recipients/{id}]}: deleteRecipient(Long)
+	{GET [/api/recipients/{id}]}: getRecipient(Long)
+2021-07-01 16:17:05.652 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.UserJWTController:
+	{POST [/api/authenticate]}: authorize(LoginVM)
+2021-07-01 16:17:05.654 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.UserResource:
+	{POST [/api/admin/users]}: createUser(AdminUserDTO)
+	{GET [/api/admin/users]}: getAllUsers(Pageable)
+	{GET [/api/admin/users/{login}]}: getUser(String)
+	{PUT [/api/admin/users]}: updateUser(AdminUserDTO)
+	{DELETE [/api/admin/users/{login}]}: deleteUser(String)
+2021-07-01 16:17:05.658 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2021-07-01 16:17:05.841 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 'beanNameHandlerMapping' {}
+2021-07-01 16:17:05.919 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]}
+2021-07-01 16:17:06.961  INFO 8077 --- [           main] com.dsirc.tests.service.UserServiceIT    : Started UserServiceIT in 9.354 seconds (JVM running for 77.624)
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.239 s - in com.dsirc.tests.service.[1mUserServiceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.[1mAccountResourceIT[m
+
+        ██╗ ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
+        ██║ ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
+        ██║ ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
+  ██╗   ██║ ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
+  ╚██████╔╝ ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
+   ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+
+:: JHipster 🤓  :: Running Spring Boot 2.4.7 ::
+:: https://www.jhipster.tech ::
+
+2021-07-01 16:17:08.081  INFO 8077 --- [           main] c.d.tests.web.rest.AccountResourceIT     : Starting AccountResourceIT using Java 11.0.10 on nicolas-XPS-13-9360 with PID 8077 (started by nicolas in /home/nicolas/IdeaProjects/pensions)
+2021-07-01 16:17:08.083  INFO 8077 --- [           main] c.d.tests.web.rest.AccountResourceIT     : No active profile set, falling back to default profiles: default
+2021-07-01 16:17:08.102  WARN 8077 --- [           main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [config/application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [config/application.yml] - 17:12]
+Skipping auto-registration
+2021-07-01 16:17:10.352  WARN 8077 --- [           main] liquibase.hub                            : Skipping auto-registration
+2021-07-01 16:17:10.490  INFO 8077 --- [           main] c.dsirc.tests.config.CacheConfiguration  : Defining app-data for local, replicated and distributed modes configuration
+2021-07-01 16:17:10.501  INFO 8077 --- [           main] c.dsirc.tests.config.CacheConfiguration  : Defining Infinispan Global Configuration
+2021-07-01 16:17:10.654  WARN 8077 --- [           main] org.infinispan.PERSISTENCE               : ISPN000554: jboss-marshalling is deprecated and planned for removal
+2021-07-01 16:17:10.718  WARN 8077 --- [           main] org.jgroups.stack.Configurator           : JGRP000014: STABLE.stability_delay has been deprecated: always 0
+2021-07-01 16:17:10.735 DEBUG 8077 --- [           main] org.jgroups.stack.Configurator           : set property TCP.diagnostics_addr to default value /224.0.75.75
+2021-07-01 16:17:10.741 DEBUG 8077 --- [           main] org.jgroups.protocols.TCP                : thread pool min/max/keep-alive: 0/200/60000 use_fork_join=false, internal pool: 0/4/30000 (4 cores available)
+2021-07-01 16:17:10.741 DEBUG 8077 --- [           main] org.jgroups.protocols.MPING              : bind_addr=/192.168.1.17, mcast_addr=/228.6.7.8, mcast_port=46655
+2021-07-01 16:17:10.762 DEBUG 8077 --- [           main] org.jgroups.protocols.MPING              : receiver thread started
+2021-07-01 16:17:10.777 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.GMS         : address=nicolas-XPS-13-9360-30949, cluster=infinispan-pensions-cluster, physical address=192.168.1.17:7803
+2021-07-01 16:17:10.867 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.GMS         : nicolas-XPS-13-9360-30949: sending JOIN(nicolas-XPS-13-9360-30949) to nicolas-XPS-13-9360-13001
+2021-07-01 16:17:10.870 DEBUG 8077 --- [S-13-9360-21478] org.jgroups.protocols.pbcast.GMS         : nicolas-XPS-13-9360-21478: installing view [nicolas-XPS-13-9360-13001|3] (4) [nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176, nicolas-XPS-13-9360-30949] (nicolas-XPS-13-9360-30949 joined)
+2021-07-01 16:17:10.870 DEBUG 8077 --- [S-13-9360-56176] org.jgroups.protocols.pbcast.GMS         : nicolas-XPS-13-9360-56176: installing view [nicolas-XPS-13-9360-13001|3] (4) [nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176, nicolas-XPS-13-9360-30949] (nicolas-XPS-13-9360-30949 joined)
+2021-07-01 16:17:10.874 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.NAKACK2     : 
+[nicolas-XPS-13-9360-30949 setDigest()]
+existing digest:  []
+new digest:       nicolas-XPS-13-9360-13001: [64 (64)], nicolas-XPS-13-9360-21478: [5 (5)], nicolas-XPS-13-9360-56176: [6 (6)], nicolas-XPS-13-9360-30949: [0 (0)]
+resulting digest: nicolas-XPS-13-9360-13001: [64 (64)], nicolas-XPS-13-9360-21478: [5 (5)], nicolas-XPS-13-9360-56176: [6 (6)], nicolas-XPS-13-9360-30949: [0 (0)]
+2021-07-01 16:17:10.874 DEBUG 8077 --- [           main] org.jgroups.protocols.pbcast.GMS         : nicolas-XPS-13-9360-30949: installing view [nicolas-XPS-13-9360-13001|3] (4) [nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176, nicolas-XPS-13-9360-30949] ([nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176, nicolas-XPS-13-9360-30949] joined)
+2021-07-01 16:17:10.878 DEBUG 8077 --- [S-13-9360-56176] org.jgroups.protocols.FD_SOCK            : nicolas-XPS-13-9360-56176: socket to nicolas-XPS-13-9360-13001 was closed gracefully
+2021-07-01 16:17:10.878 DEBUG 8077 --- [S-13-9360-56176] org.jgroups.protocols.FD_SOCK            : nicolas-XPS-13-9360-56176: pingable_mbrs=[nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176, nicolas-XPS-13-9360-30949], ping_dest=nicolas-XPS-13-9360-30949
+2021-07-01 16:17:10.942 DEBUG 8077 --- [S-13-9360-30949] org.jgroups.protocols.FD_SOCK            : nicolas-XPS-13-9360-30949: pingable_mbrs=[nicolas-XPS-13-9360-13001, nicolas-XPS-13-9360-21478, nicolas-XPS-13-9360-56176, nicolas-XPS-13-9360-30949], ping_dest=nicolas-XPS-13-9360-13001
+2021-07-01 16:17:14.781 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.c.WebConfigurerTestController:
+	{GET [/api/test-cors]}: testCorsOnApiPath()
+	{GET [/test/test-cors]}: testCorsOnOtherPath()
+2021-07-01 16:17:14.783 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.e.ExceptionTranslatorTestController:
+	{GET [/api/exception-translator-test/unauthorized]}: unauthorized()
+	{GET [/api/exception-translator-test/access-denied]}: accessdenied()
+	{GET [/api/exception-translator-test/missing-servlet-request-part]}: missingServletRequestPartException(String)
+	{GET [/api/exception-translator-test/response-status]}: exceptionWithResponseStatus()
+	{GET [/api/exception-translator-test/internal-server-error]}: internalServerError()
+	{GET [/api/exception-translator-test/missing-servlet-request-parameter]}: missingServletRequestParameterException(String)
+	{GET [/api/exception-translator-test/concurrency-failure]}: concurrencyFailure()
+	{POST [/api/exception-translator-test/method-argument]}: methodArgument(TestDTO)
+2021-07-01 16:17:14.785 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.AccountResource:
+	{POST [/api/account/change-password]}: changePassword(PasswordChangeDTO)
+	{POST [/api/account/reset-password/init]}: requestPasswordReset(String)
+	{POST [/api/register]}: registerAccount(ManagedUserVM)
+	{GET [/api/activate]}: activateAccount(String)
+	{GET [/api/authenticate]}: isAuthenticated(HttpServletRequest)
+	{GET [/api/account]}: getAccount()
+	{POST [/api/account]}: saveAccount(AdminUserDTO)
+	{POST [/api/account/reset-password/finish]}: finishPasswordReset(KeyAndPasswordVM)
+2021-07-01 16:17:14.788 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.AddressResource:
+	{PUT [/api/addresses/{id}]}: updateAddress(Long,Address)
+	{PATCH [/api/addresses/{id}], consumes [application/merge-patch+json]}: partialUpdateAddress(Long,Address)
+	{POST [/api/addresses]}: createAddress(Address)
+	{GET [/api/addresses]}: getAllAddresses()
+	{DELETE [/api/addresses/{id}]}: deleteAddress(Long)
+	{GET [/api/addresses/{id}]}: getAddress(Long)
+2021-07-01 16:17:14.789 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.ClientForwardController:
+	{GET [/**/{path:[^\.]*}]}: forward()
+2021-07-01 16:17:14.790 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.ContactResource:
+	{PATCH [/api/contacts/{id}], consumes [application/merge-patch+json]}: partialUpdateContact(Long,Contact)
+	{PUT [/api/contacts/{id}]}: updateContact(Long,Contact)
+	{POST [/api/contacts]}: createContact(Contact)
+	{GET [/api/contacts]}: getAllContacts()
+	{GET [/api/contacts/{id}]}: getContact(Long)
+	{DELETE [/api/contacts/{id}]}: deleteContact(Long)
+2021-07-01 16:17:14.793 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.PaymentResource:
+	{PATCH [/api/payments/{id}], consumes [application/merge-patch+json]}: partialUpdatePayment(Long,Payment)
+	{PUT [/api/payments/{id}]}: updatePayment(Long,Payment)
+	{POST [/api/payments]}: createPayment(Payment)
+	{GET [/api/payments]}: getAllPayments(Pageable)
+	{GET [/api/payments/{id}]}: getPayment(Long)
+	{DELETE [/api/payments/{id}]}: deletePayment(Long)
+2021-07-01 16:17:14.798 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.PensionResource:
+	{PATCH [/api/pensions/{id}], consumes [application/merge-patch+json]}: partialUpdatePension(Long,Pension)
+	{PUT [/api/pensions/{id}]}: updatePension(Long,Pension)
+	{GET [/api/pensions/{id}]}: getPension(Long)
+	{POST [/api/pensions]}: createPension(Pension)
+	{GET [/api/pensions]}: getAllPensions(Pageable)
+	{DELETE [/api/pensions/{id}]}: deletePension(Long)
+2021-07-01 16:17:14.802 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.PublicUserResource:
+	{GET [/api/authorities]}: getAuthorities()
+	{GET [/api/users]}: getAllPublicUsers(Pageable)
+2021-07-01 16:17:14.803 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.RecipientResource:
+	{PATCH [/api/recipients/{id}], consumes [application/merge-patch+json]}: partialUpdateRecipient(Long,Recipient)
+	{PUT [/api/recipients/{id}]}: updateRecipient(Long,Recipient)
+	{POST [/api/recipients]}: createRecipient(Recipient)
+	{GET [/api/recipients]}: getAllRecipients(Pageable,String)
+	{DELETE [/api/recipients/{id}]}: deleteRecipient(Long)
+	{GET [/api/recipients/{id}]}: getRecipient(Long)
+2021-07-01 16:17:14.805 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.UserJWTController:
+	{POST [/api/authenticate]}: authorize(LoginVM)
+2021-07-01 16:17:14.806 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	c.d.t.w.r.UserResource:
+	{POST [/api/admin/users]}: createUser(AdminUserDTO)
+	{GET [/api/admin/users]}: getAllUsers(Pageable)
+	{GET [/api/admin/users/{login}]}: getUser(String)
+	{PUT [/api/admin/users]}: updateUser(AdminUserDTO)
+	{DELETE [/api/admin/users/{login}]}: deleteUser(String)
+2021-07-01 16:17:14.808 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2021-07-01 16:17:14.898 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 'beanNameHandlerMapping' {}
+2021-07-01 16:17:14.933 DEBUG 8077 --- [           main] _.s.web.servlet.HandlerMapping.Mappings  : 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]}
+2021-07-01 16:17:15.648  INFO 8077 --- [           main] c.d.tests.web.rest.AccountResourceIT     : Started AccountResourceIT in 7.759 seconds (JVM running for 86.311)
+2021-07-01 16:17:16.176  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public void com.dsirc.tests.web.rest.AccountResource.saveAccount(com.dsirc.tests.service.dto.AdminUserDTO): [Field error in object 'adminUserDTO' on field 'email': rejected value [invalid email]; codes [Email.adminUserDTO.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [adminUserDTO.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@468cdf20,.*]; default message [must be a well-formed email address]] 
+2021-07-01 16:17:16.503  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Incorrect password
+2021-07-01 16:17:16.519  WARN 8077 --- [           main] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2021-07-01 16:17:16.579 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Email is already in use!
+2021-07-01 16:17:16.579  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Email is already in use!
+2021-07-01 16:17:16.783  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public void com.dsirc.tests.web.rest.AccountResource.registerAccount(com.dsirc.tests.web.rest.vm.ManagedUserVM): [Field error in object 'managedUserVM' on field 'email': rejected value [invalid]; codes [Email.managedUserVM.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [managedUserVM.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@468cdf20,.*]; default message [must be a well-formed email address]] 
+2021-07-01 16:17:16.867  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public void com.dsirc.tests.web.rest.AccountResource.registerAccount(com.dsirc.tests.web.rest.vm.ManagedUserVM): [Field error in object 'managedUserVM' on field 'login': rejected value [funky-log(n]; codes [Pattern.managedUserVM.login,Pattern.login,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [managedUserVM.login,login]; arguments []; default message [login],[Ljavax.validation.constraints.Pattern$Flag;@6da58265,^(?>[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$]; default message [must match "^(?>[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$"]] 
+2021-07-01 16:17:16.920  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public void com.dsirc.tests.web.rest.AccountResource.registerAccount(com.dsirc.tests.web.rest.vm.ManagedUserVM): [Field error in object 'managedUserVM' on field 'password': rejected value [123]; codes [Size.managedUserVM.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [managedUserVM.password,password]; arguments []; default message [password],100,4]; default message [size must be between 4 and 100]] 
+2021-07-01 16:17:17.464  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Incorrect password
+2021-07-01 16:17:17.970 ERROR 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Internal Server Error
+
+com.dsirc.tests.web.rest.AccountResource$AccountResourceException: No user was found for this activation key
+	at com.dsirc.tests.web.rest.AccountResource.activateAccount(AccountResource.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.dsirc.tests.security.jwt.JWTFilter.doFilter(JWTFilter.java:37)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:97)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183)
+	at com.dsirc.tests.web.rest.AccountResourceIT.testActivateAccountWithWrongKey(AccountResourceIT.java:402)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:188)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:154)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+
+2021-07-01 16:17:18.026 ERROR 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Internal Server Error
+
+com.dsirc.tests.web.rest.AccountResource$AccountResourceException: User could not be found
+	at com.dsirc.tests.web.rest.AccountResource.lambda$getAccount$0(AccountResource.java:106)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at com.dsirc.tests.web.rest.AccountResource.getAccount(AccountResource.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.dsirc.tests.security.jwt.JWTFilter.doFilter(JWTFilter.java:37)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:97)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183)
+	at com.dsirc.tests.web.rest.AccountResourceIT.testGetUnknownAccount(AccountResourceIT.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:188)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:154)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+
+2021-07-01 16:17:18.726  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Incorrect password
+2021-07-01 16:17:18.866  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Incorrect password
+2021-07-01 16:17:19.018  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Incorrect password
+2021-07-01 16:17:19.532 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Email is already in use!
+2021-07-01 16:17:19.532  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Email is already in use!
+2021-07-01 16:17:19.918 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Login name already used!
+2021-07-01 16:17:19.924  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Login name already used!
+2021-07-01 16:17:20.017  WARN 8077 --- [           main] c.dsirc.tests.web.rest.AccountResource   : Password reset requested for non existing mail
+2021-07-01 16:17:20.581  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Incorrect password
+2021-07-01 16:17:21.164 ERROR 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Internal Server Error
+
+com.dsirc.tests.web.rest.AccountResource$AccountResourceException: No user was found for this reset key
+	at com.dsirc.tests.web.rest.AccountResource.finishPasswordReset(AccountResource.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:517)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.dsirc.tests.security.jwt.JWTFilter.doFilter(JWTFilter.java:37)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:97)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183)
+	at com.dsirc.tests.web.rest.AccountResourceIT.testFinishPasswordResetWrongKey(AccountResourceIT.java:755)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:188)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:154)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m29[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.341 s - in com.dsirc.tests.web.rest.[1mAccountResourceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.[1mAddressResourceIT[m
+2021-07-01 16:17:21.527 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Entity not found
+2021-07-01 16:17:21.527  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Entity not found
+2021-07-01 16:17:21.568 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Invalid ID
+2021-07-01 16:17:21.568  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Invalid ID
+2021-07-01 16:17:21.645  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'PUT' not supported
+2021-07-01 16:17:21.676  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'PATCH' not supported
+2021-07-01 16:17:21.811  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Address> com.dsirc.tests.web.rest.AddressResource.createAddress(com.dsirc.tests.domain.Address) throws java.net.URISyntaxException: [Field error in object 'address' on field 'city': rejected value [null]; codes [NotNull.address.city,NotNull.city,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [address.city,city]; arguments []; default message [city]]; default message [must not be null]] 
+2021-07-01 16:17:21.878 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Entity not found
+2021-07-01 16:17:21.878  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Entity not found
+2021-07-01 16:17:21.913  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Not Found: 404 NOT_FOUND
+2021-07-01 16:17:22.028  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Address> com.dsirc.tests.web.rest.AddressResource.createAddress(com.dsirc.tests.domain.Address) throws java.net.URISyntaxException: [Field error in object 'address' on field 'country': rejected value [null]; codes [NotNull.address.country,NotNull.country,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [address.country,country]; arguments []; default message [country]]; default message [must not be null]] 
+2021-07-01 16:17:22.063  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Address> com.dsirc.tests.web.rest.AddressResource.createAddress(com.dsirc.tests.domain.Address) throws java.net.URISyntaxException: [Field error in object 'address' on field 'addressLine1': rejected value [null]; codes [NotNull.address.addressLine1,NotNull.addressLine1,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [address.addressLine1,addressLine1]; arguments []; default message [addressLine1]]; default message [must not be null]] 
+2021-07-01 16:17:22.149 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Invalid ID
+2021-07-01 16:17:22.149  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Invalid ID
+2021-07-01 16:17:22.178 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, A new address cannot already have an ID
+2021-07-01 16:17:22.179  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: A new address cannot already have an ID
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m18[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.005 s - in com.dsirc.tests.web.rest.[1mAddressResourceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.[1mContactResourceIT[m
+2021-07-01 16:17:22.285 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Entity not found
+2021-07-01 16:17:22.285  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Entity not found
+2021-07-01 16:17:22.361  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Not Found: 404 NOT_FOUND
+2021-07-01 16:17:22.381  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Contact> com.dsirc.tests.web.rest.ContactResource.createContact(com.dsirc.tests.domain.Contact) throws java.net.URISyntaxException: [Field error in object 'contact' on field 'phone': rejected value [null]; codes [NotNull.contact.phone,NotNull.phone,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [contact.phone,phone]; arguments []; default message [phone]]; default message [must not be null]] 
+2021-07-01 16:17:22.489 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Invalid ID
+2021-07-01 16:17:22.490  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Invalid ID
+2021-07-01 16:17:22.522  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Contact> com.dsirc.tests.web.rest.ContactResource.createContact(com.dsirc.tests.domain.Contact) throws java.net.URISyntaxException: [Field error in object 'contact' on field 'email': rejected value [null]; codes [NotNull.contact.email,NotNull.email,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [contact.email,email]; arguments []; default message [email]]; default message [must not be null]] 
+2021-07-01 16:17:22.551 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, A new contact cannot already have an ID
+2021-07-01 16:17:22.551  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: A new contact cannot already have an ID
+2021-07-01 16:17:22.624 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Entity not found
+2021-07-01 16:17:22.624  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Entity not found
+2021-07-01 16:17:22.637 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Invalid ID
+2021-07-01 16:17:22.637  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Invalid ID
+2021-07-01 16:17:22.675  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'PUT' not supported
+2021-07-01 16:17:22.702  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'PATCH' not supported
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m17[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.529 s - in com.dsirc.tests.web.rest.[1mContactResourceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.[1mPaymentResourceIT[m
+2021-07-01 16:17:22.893 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Invalid ID
+2021-07-01 16:17:22.893  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Invalid ID
+2021-07-01 16:17:22.925  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Payment> com.dsirc.tests.web.rest.PaymentResource.createPayment(com.dsirc.tests.domain.Payment) throws java.net.URISyntaxException: [Field error in object 'payment' on field 'paymentDate': rejected value [null]; codes [NotNull.payment.paymentDate,NotNull.paymentDate,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [payment.paymentDate,paymentDate]; arguments []; default message [paymentDate]]; default message [must not be null]] 
+2021-07-01 16:17:23.062 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Entity not found
+2021-07-01 16:17:23.062  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Entity not found
+2021-07-01 16:17:23.099 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Invalid ID
+2021-07-01 16:17:23.099  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Invalid ID
+2021-07-01 16:17:23.132  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'PUT' not supported
+2021-07-01 16:17:23.154  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'PATCH' not supported
+2021-07-01 16:17:23.211 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Entity not found
+2021-07-01 16:17:23.211  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Entity not found
+2021-07-01 16:17:23.228  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Not Found: 404 NOT_FOUND
+2021-07-01 16:17:23.358  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Payment> com.dsirc.tests.web.rest.PaymentResource.createPayment(com.dsirc.tests.domain.Payment) throws java.net.URISyntaxException: [Field error in object 'payment' on field 'paymentsStatus': rejected value [null]; codes [NotNull.payment.paymentsStatus,NotNull.paymentsStatus,NotNull.com.dsirc.tests.domain.enumeration.PaymentStatus,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [payment.paymentsStatus,paymentsStatus]; arguments []; default message [paymentsStatus]]; default message [must not be null]] 
+2021-07-01 16:17:23.409 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, A new payment cannot already have an ID
+2021-07-01 16:17:23.410  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: A new payment cannot already have an ID
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m17[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.69 s - in com.dsirc.tests.web.rest.[1mPaymentResourceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.[1mPensionResourceIT[m
+2021-07-01 16:17:23.489 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Invalid ID
+2021-07-01 16:17:23.489  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Invalid ID
+2021-07-01 16:17:23.549  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Pension> com.dsirc.tests.web.rest.PensionResource.createPension(com.dsirc.tests.domain.Pension) throws java.net.URISyntaxException: [Field error in object 'pension' on field 'paymentMethod': rejected value [null]; codes [NotNull.pension.paymentMethod,NotNull.paymentMethod,NotNull.com.dsirc.tests.domain.enumeration.PaymentMethod,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pension.paymentMethod,paymentMethod]; arguments []; default message [paymentMethod]]; default message [must not be null]] 
+2021-07-01 16:17:23.629 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Entity not found
+2021-07-01 16:17:23.629  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Entity not found
+2021-07-01 16:17:23.656 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Invalid ID
+2021-07-01 16:17:23.657  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Invalid ID
+2021-07-01 16:17:23.673  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'PUT' not supported
+2021-07-01 16:17:23.691 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, A new pension cannot already have an ID
+2021-07-01 16:17:23.691  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: A new pension cannot already have an ID
+2021-07-01 16:17:23.712  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'PATCH' not supported
+2021-07-01 16:17:23.794 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Entity not found
+2021-07-01 16:17:23.794  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Entity not found
+2021-07-01 16:17:23.810  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Not Found: 404 NOT_FOUND
+2021-07-01 16:17:23.827  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Pension> com.dsirc.tests.web.rest.PensionResource.createPension(com.dsirc.tests.domain.Pension) throws java.net.URISyntaxException: [Field error in object 'pension' on field 'startingDate': rejected value [null]; codes [NotNull.pension.startingDate,NotNull.startingDate,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pension.startingDate,startingDate]; arguments []; default message [startingDate]]; default message [must not be null]] 
+2021-07-01 16:17:23.862  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Pension> com.dsirc.tests.web.rest.PensionResource.createPension(com.dsirc.tests.domain.Pension) throws java.net.URISyntaxException: [Field error in object 'pension' on field 'amount': rejected value [null]; codes [NotNull.pension.amount,NotNull.amount,NotNull.java.math.BigDecimal,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pension.amount,amount]; arguments []; default message [amount]]; default message [must not be null]] 
+2021-07-01 16:17:23.889  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Pension> com.dsirc.tests.web.rest.PensionResource.createPension(com.dsirc.tests.domain.Pension) throws java.net.URISyntaxException: [Field error in object 'pension' on field 'pensionType': rejected value [null]; codes [NotNull.pension.pensionType,NotNull.pensionType,NotNull.com.dsirc.tests.domain.enumeration.PensionType,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pension.pensionType,pensionType]; arguments []; default message [pensionType]]; default message [must not be null]] 
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m19[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.443 s - in com.dsirc.tests.web.rest.[1mPensionResourceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.[1mPublicUserResourceIT[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.169 s - in com.dsirc.tests.web.rest.[1mPublicUserResourceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.[1mRecipientResourceIT[m
+2021-07-01 16:17:24.185  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Recipient> com.dsirc.tests.web.rest.RecipientResource.createRecipient(com.dsirc.tests.domain.Recipient) throws java.net.URISyntaxException: [Field error in object 'recipient' on field 'firstName': rejected value [null]; codes [NotNull.recipient.firstName,NotNull.firstName,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [recipient.firstName,firstName]; arguments []; default message [firstName]]; default message [must not be null]] 
+2021-07-01 16:17:24.217  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Recipient> com.dsirc.tests.web.rest.RecipientResource.createRecipient(com.dsirc.tests.domain.Recipient) throws java.net.URISyntaxException: [Field error in object 'recipient' on field 'gender': rejected value [null]; codes [NotNull.recipient.gender,NotNull.gender,NotNull.com.dsirc.tests.domain.enumeration.Gender,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [recipient.gender,gender]; arguments []; default message [gender]]; default message [must not be null]] 
+2021-07-01 16:17:24.247 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Invalid ID
+2021-07-01 16:17:24.248  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Invalid ID
+2021-07-01 16:17:24.265 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Invalid ID
+2021-07-01 16:17:24.265  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Invalid ID
+2021-07-01 16:17:24.291 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, A new recipient cannot already have an ID
+2021-07-01 16:17:24.291  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: A new recipient cannot already have an ID
+2021-07-01 16:17:24.359  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Not Found: 404 NOT_FOUND
+2021-07-01 16:17:24.411 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Entity not found
+2021-07-01 16:17:24.412  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Entity not found
+2021-07-01 16:17:24.455  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'PATCH' not supported
+2021-07-01 16:17:24.629  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Recipient> com.dsirc.tests.web.rest.RecipientResource.createRecipient(com.dsirc.tests.domain.Recipient) throws java.net.URISyntaxException: [Field error in object 'recipient' on field 'lastName': rejected value [null]; codes [NotNull.recipient.lastName,NotNull.lastName,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [recipient.lastName,lastName]; arguments []; default message [lastName]]; default message [must not be null]] 
+2021-07-01 16:17:24.650 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Entity not found
+2021-07-01 16:17:24.650  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Entity not found
+2021-07-01 16:17:24.718  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'PUT' not supported
+2021-07-01 16:17:24.776  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.dsirc.tests.domain.Recipient> com.dsirc.tests.web.rest.RecipientResource.createRecipient(com.dsirc.tests.domain.Recipient) throws java.net.URISyntaxException: [Field error in object 'recipient' on field 'birthDate': rejected value [null]; codes [NotNull.recipient.birthDate,NotNull.birthDate,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [recipient.birthDate,birthDate]; arguments []; default message [birthDate]]; default message [must not be null]] 
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m19[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.708 s - in com.dsirc.tests.web.rest.[1mRecipientResourceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.[1mUserJWTControllerIT[m
+2021-07-01 16:17:25.244  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Unauthorized: Bad credentials
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.174 s - in com.dsirc.tests.web.rest.[1mUserJWTControllerIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.[1mUserResourceIT[m
+2021-07-01 16:17:26.059 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Email is already in use!
+2021-07-01 16:17:26.059  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Email is already in use!
+2021-07-01 16:17:26.088 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Login name already used!
+2021-07-01 16:17:26.089  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Login name already used!
+2021-07-01 16:17:26.467 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, A new user cannot already have an ID
+2021-07-01 16:17:26.468  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: A new user cannot already have an ID
+2021-07-01 16:17:26.601  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Not Found: 404 NOT_FOUND
+2021-07-01 16:17:26.684 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Email is already in use!
+2021-07-01 16:17:26.684  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Email is already in use!
+2021-07-01 16:17:26.758 ERROR 8077 --- [           main] tech.jhipster.web.util.HeaderUtil        : Entity processing failed, Login name already used!
+2021-07-01 16:17:26.759  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Login name already used!
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m16[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.164 s - in com.dsirc.tests.web.rest.[1mUserResourceIT[m
+[[1;34mINFO[m] Running com.dsirc.tests.web.rest.errors.[1mExceptionTranslatorIT[m
+2021-07-01 16:17:27.192  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Required request part 'part' is not present
+2021-07-01 16:17:27.209  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Required request parameter 'param' for method parameter type String is not present
+2021-07-01 16:17:27.225  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Forbidden: test access denied!
+2021-07-01 16:17:27.242 ERROR 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Internal Server Error
+
+java.lang.RuntimeException: null
+	at com.dsirc.tests.web.rest.errors.ExceptionTranslatorTestController.internalServerError(ExceptionTranslatorTestController.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.dsirc.tests.security.jwt.JWTFilter.doFilter(JWTFilter.java:37)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:97)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183)
+	at com.dsirc.tests.web.rest.errors.ExceptionTranslatorIT.testInternalServerError(ExceptionTranslatorIT.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:188)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:154)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+
+2021-07-01 16:17:27.259  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Method Not Allowed: Request method 'POST' not supported
+2021-07-01 16:17:27.276  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: null
+2021-07-01 16:17:27.301  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Bad Request: Validation failed for argument [0] in public void com.dsirc.tests.web.rest.errors.ExceptionTranslatorTestController.methodArgument(com.dsirc.tests.web.rest.errors.ExceptionTranslatorTestController$TestDTO): [Field error in object 'testDTO' on field 'test': rejected value [null]; codes [NotNull.testDTO.test,NotNull.test,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [testDTO.test,test]; arguments []; default message [test]]; default message [must not be null]] 
+2021-07-01 16:17:27.319  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Unauthorized: test authentication failed!
+2021-07-01 16:17:27.385  WARN 8077 --- [           main] o.z.problem.spring.common.AdviceTraits   : Conflict: test concurrency failure
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.256 s - in com.dsirc.tests.web.rest.errors.[1mExceptionTranslatorIT[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 180, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:report-integration[m [1m(post-integration-tests)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /home/nicolas/IdeaProjects/pensions/target/jacoco-it.exec
+[[1;34mINFO[m] Analyzed bundle 'Pensions' with 80 classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.1.2:check[m [1m(default)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-failsafe-plugin:3.0.0-M5:verify[m [1m(verify)[m @ [36mpensions[0;1m ---[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  02:34 min
+[[1;34mINFO[m] Finished at: 2021-07-01T16:17:30+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

@@ -42,6 +42,8 @@
     "devServerPort": 4200,
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["fr", "en", "de"]
+    "languages": ["fr", "en", "de"],
+    "entities": ["Address", "Contact", "Recipient", "Pension", "Payment"],
+    "lastLiquibaseTimestamp": 1624987839000
   }
 }

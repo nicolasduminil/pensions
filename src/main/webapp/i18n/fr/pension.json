@@ -1,0 +1,28 @@
+{
+  "pensionsApp": {
+    "pension": {
+      "home": {
+        "title": "Pensions",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Pension",
+        "createOrEditLabel": "Créer ou éditer un Pension",
+        "notFound": "Aucun Pension trouvé"
+      },
+      "created": "Un nouveau Pension a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Pension avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Pension avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Pension {{ id }} ?"
+      },
+      "detail": {
+        "title": "Pension"
+      },
+      "id": "ID",
+      "pensionType": "Pension Type",
+      "startingDate": "Starting Date",
+      "paymentMethod": "Payment Method",
+      "amount": "Amount",
+      "recipient": "Recipient"
+    }
+  }
+}

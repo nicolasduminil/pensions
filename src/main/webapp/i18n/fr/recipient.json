@@ -1,0 +1,30 @@
+{
+  "pensionsApp": {
+    "recipient": {
+      "home": {
+        "title": "Recipients",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Recipient",
+        "createOrEditLabel": "Créer ou éditer un Recipient",
+        "notFound": "Aucun Recipient trouvé"
+      },
+      "created": "Un nouveau Recipient a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Recipient avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Recipient avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Recipient {{ id }} ?"
+      },
+      "detail": {
+        "title": "Recipient"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "birthDate": "Birth Date",
+      "gender": "Gender",
+      "address": "Address",
+      "contact": "Contact",
+      "pension": "Pension"
+    }
+  }
+}
