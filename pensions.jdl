@@ -1,0 +1,67 @@
+/** Recipient Address */
+entity Address {
+    addressLine1 String required
+    addressLine2 String
+    city String required
+    country String required
+}
+
+/** Recipient Contact */
+entity Contact {
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+    phone String required
+}
+
+/** Recipient Gender */
+enum Gender {
+    MALE, FEMALE, OTHER
+}
+
+/** Recipient entitled to Pension */
+entity Recipient {
+    firstName String required
+    lastName String required
+    birthDate LocalDate required
+    gender Gender required
+}
+
+/** Pension type */
+enum PensionType {
+    TYPE1, TYPE2, TYPE3
+}
+
+/** Recipient Pension */
+entity Pension {
+    pensionType PensionType required
+    startingDate LocalDate required
+    paymentMethod PaymentMethod required
+    amount BigDecimal required
+}
+
+/** Pension Payment */
+entity Payment {
+    paymentsStatus PaymentStatus required
+    paymentDate LocalDate required
+}
+
+enum PaymentStatus {
+    COMPLETED, PENDING, CANCELLED
+}
+
+enum PaymentMethod {
+    BANK_TRANSFER, POSTAL_ORDER
+}
+
+relationship OneToOne {
+    Pension{recipient} to Recipient{pension},
+    Payment{pension} to Pension{payment},
+    Payment{recipient} to Recipient{payment}
+}
+
+relationship OneToMany {
+   Recipient{address} to Address{recipient},
+   Recipient{contact} to Contact{recipient}
+}
+
+service * with serviceClass
+paginate Recipient, Pension, Payment with pagination
