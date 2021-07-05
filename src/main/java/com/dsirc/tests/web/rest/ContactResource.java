@@ -1,8 +1,8 @@
 package com.dsirc.tests.web.rest;
 
-import com.dsirc.tests.domain.Contact;
 import com.dsirc.tests.repository.ContactRepository;
 import com.dsirc.tests.service.ContactService;
+import com.dsirc.tests.service.dto.ContactDTO;
 import com.dsirc.tests.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -45,17 +45,17 @@ public class ContactResource {
     /**
      * {@code POST  /contacts} : Create a new contact.
      *
-     * @param contact the contact to create.
-     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new contact, or with status {@code 400 (Bad Request)} if the contact has already an ID.
+     * @param contactDTO the contactDTO to create.
+     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new contactDTO, or with status {@code 400 (Bad Request)} if the contact has already an ID.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("/contacts")
-    public ResponseEntity<Contact> createContact(@Valid @RequestBody Contact contact) throws URISyntaxException {
-        log.debug("REST request to save Contact : {}", contact);
-        if (contact.getId() != null) {
+    public ResponseEntity<ContactDTO> createContact(@Valid @RequestBody ContactDTO contactDTO) throws URISyntaxException {
+        log.debug("REST request to save Contact : {}", contactDTO);
+        if (contactDTO.getId() != null) {
             throw new BadRequestAlertException("A new contact cannot already have an ID", ENTITY_NAME, "idexists");
         }
-        Contact result = contactService.save(contact);
+        ContactDTO result = contactService.save(contactDTO);
         return ResponseEntity
             .created(new URI("/api/contacts/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
@@ -65,23 +65,23 @@ public class ContactResource {
     /**
      * {@code PUT  /contacts/:id} : Updates an existing contact.
      *
-     * @param id the id of the contact to save.
-     * @param contact the contact to update.
-     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated contact,
-     * or with status {@code 400 (Bad Request)} if the contact is not valid,
-     * or with status {@code 500 (Internal Server Error)} if the contact couldn't be updated.
+     * @param id the id of the contactDTO to save.
+     * @param contactDTO the contactDTO to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated contactDTO,
+     * or with status {@code 400 (Bad Request)} if the contactDTO is not valid,
+     * or with status {@code 500 (Internal Server Error)} if the contactDTO couldn't be updated.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/contacts/{id}")
-    public ResponseEntity<Contact> updateContact(
+    public ResponseEntity<ContactDTO> updateContact(
         @PathVariable(value = "id", required = false) final Long id,
-        @Valid @RequestBody Contact contact
+        @Valid @RequestBody ContactDTO contactDTO
     ) throws URISyntaxException {
-        log.debug("REST request to update Contact : {}, {}", id, contact);
-        if (contact.getId() == null) {
+        log.debug("REST request to update Contact : {}, {}", id, contactDTO);
+        if (contactDTO.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        if (!Objects.equals(id, contact.getId())) {
+        if (!Objects.equals(id, contactDTO.getId())) {
             throw new BadRequestAlertException("Invalid ID", ENTITY_NAME, "idinvalid");
         }
 
@@ -89,34 +89,34 @@ public class ContactResource {
             throw new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound");
         }
 
-        Contact result = contactService.save(contact);
+        ContactDTO result = contactService.save(contactDTO);
         return ResponseEntity
             .ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, contact.getId().toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, contactDTO.getId().toString()))
             .body(result);
     }
 
     /**
      * {@code PATCH  /contacts/:id} : Partial updates given fields of an existing contact, field will ignore if it is null
      *
-     * @param id the id of the contact to save.
-     * @param contact the contact to update.
-     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated contact,
-     * or with status {@code 400 (Bad Request)} if the contact is not valid,
-     * or with status {@code 404 (Not Found)} if the contact is not found,
-     * or with status {@code 500 (Internal Server Error)} if the contact couldn't be updated.
+     * @param id the id of the contactDTO to save.
+     * @param contactDTO the contactDTO to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated contactDTO,
+     * or with status {@code 400 (Bad Request)} if the contactDTO is not valid,
+     * or with status {@code 404 (Not Found)} if the contactDTO is not found,
+     * or with status {@code 500 (Internal Server Error)} if the contactDTO couldn't be updated.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PatchMapping(value = "/contacts/{id}", consumes = "application/merge-patch+json")
-    public ResponseEntity<Contact> partialUpdateContact(
+    public ResponseEntity<ContactDTO> partialUpdateContact(
         @PathVariable(value = "id", required = false) final Long id,
-        @NotNull @RequestBody Contact contact
+        @NotNull @RequestBody ContactDTO contactDTO
     ) throws URISyntaxException {
-        log.debug("REST request to partial update Contact partially : {}, {}", id, contact);
-        if (contact.getId() == null) {
+        log.debug("REST request to partial update Contact partially : {}, {}", id, contactDTO);
+        if (contactDTO.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        if (!Objects.equals(id, contact.getId())) {
+        if (!Objects.equals(id, contactDTO.getId())) {
             throw new BadRequestAlertException("Invalid ID", ENTITY_NAME, "idinvalid");
         }
 
@@ -124,11 +124,11 @@ public class ContactResource {
             throw new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound");
         }
 
-        Optional<Contact> result = contactService.partialUpdate(contact);
+        Optional<ContactDTO> result = contactService.partialUpdate(contactDTO);
 
         return ResponseUtil.wrapOrNotFound(
             result,
-            HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, contact.getId().toString())
+            HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, contactDTO.getId().toString())
         );
     }
 
@@ -138,7 +138,7 @@ public class ContactResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of contacts in body.
      */
     @GetMapping("/contacts")
-    public List<Contact> getAllContacts() {
+    public List<ContactDTO> getAllContacts() {
         log.debug("REST request to get all Contacts");
         return contactService.findAll();
     }
@@ -146,20 +146,20 @@ public class ContactResource {
     /**
      * {@code GET  /contacts/:id} : get the "id" contact.
      *
-     * @param id the id of the contact to retrieve.
-     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the contact, or with status {@code 404 (Not Found)}.
+     * @param id the id of the contactDTO to retrieve.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the contactDTO, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/contacts/{id}")
-    public ResponseEntity<Contact> getContact(@PathVariable Long id) {
+    public ResponseEntity<ContactDTO> getContact(@PathVariable Long id) {
         log.debug("REST request to get Contact : {}", id);
-        Optional<Contact> contact = contactService.findOne(id);
-        return ResponseUtil.wrapOrNotFound(contact);
+        Optional<ContactDTO> contactDTO = contactService.findOne(id);
+        return ResponseUtil.wrapOrNotFound(contactDTO);
     }
 
     /**
      * {@code DELETE  /contacts/:id} : delete the "id" contact.
      *
-     * @param id the id of the contact to delete.
+     * @param id the id of the contactDTO to delete.
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/contacts/{id}")

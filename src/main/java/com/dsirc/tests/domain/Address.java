@@ -1,7 +1,6 @@
 package com.dsirc.tests.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import io.swagger.annotations.ApiModel;
 import java.io.Serializable;
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -11,7 +10,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 /**
  * Recipient Address
  */
-@ApiModel(description = "Recipient Address")
 @Entity
 @Table(name = "address")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -40,7 +38,7 @@ public class Address implements Serializable {
     private String country;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "addresses", "contacts", "pension" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "addresses", "contacts", "pension", "payment" }, allowSetters = true)
     private Recipient recipient;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here

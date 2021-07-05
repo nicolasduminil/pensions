@@ -25,15 +25,15 @@
       "relationshipType": "one-to-one",
       "otherEntityName": "recipient",
       "otherEntityRelationshipName": "payment",
-      "relationshipName": "receipient",
+      "relationshipName": "recipient",
       "ownerSide": true
     }
   ],
   "javadoc": "Pension Payment",
   "entityTableName": "payment",
-  "dto": "no",
+  "dto": "mapstruct",
   "pagination": "pagination",
-  "service": "serviceClass",
+  "service": "serviceImpl",
   "jpaMetamodelFiltering": false,
   "fluentMethods": true,
   "readOnly": false,

@@ -62,37 +62,37 @@ describe('Component Tests', () => {
         expect(comp.pensionsCollection).toEqual(expectedCollection);
       });
 
-      it('Should call receipient query and add missing value', () => {
+      it('Should call recipient query and add missing value', () => {
         const payment: IPayment = { id: 456 };
-        const receipient: IRecipient = { id: 69146 };
-        payment.receipient = receipient;
+        const recipient: IRecipient = { id: 69146 };
+        payment.recipient = recipient;
 
-        const receipientCollection: IRecipient[] = [{ id: 41259 }];
-        jest.spyOn(recipientService, 'query').mockReturnValue(of(new HttpResponse({ body: receipientCollection })));
-        const expectedCollection: IRecipient[] = [receipient, ...receipientCollection];
+        const recipientCollection: IRecipient[] = [{ id: 41259 }];
+        jest.spyOn(recipientService, 'query').mockReturnValue(of(new HttpResponse({ body: recipientCollection })));
+        const expectedCollection: IRecipient[] = [recipient, ...recipientCollection];
         jest.spyOn(recipientService, 'addRecipientToCollectionIfMissing').mockReturnValue(expectedCollection);
 
         activatedRoute.data = of({ payment });
         comp.ngOnInit();
 
         expect(recipientService.query).toHaveBeenCalled();
-        expect(recipientService.addRecipientToCollectionIfMissing).toHaveBeenCalledWith(receipientCollection, receipient);
-        expect(comp.receipientsCollection).toEqual(expectedCollection);
+        expect(recipientService.addRecipientToCollectionIfMissing).toHaveBeenCalledWith(recipientCollection, recipient);
+        expect(comp.recipientsCollection).toEqual(expectedCollection);
       });
 
       it('Should update editForm', () => {
         const payment: IPayment = { id: 456 };
         const pension: IPension = { id: 63560 };
         payment.pension = pension;
-        const receipient: IRecipient = { id: 44604 };
-        payment.receipient = receipient;
+        const recipient: IRecipient = { id: 44604 };
+        payment.recipient = recipient;
 
         activatedRoute.data = of({ payment });
         comp.ngOnInit();
 
         expect(comp.editForm.value).toEqual(expect.objectContaining(payment));
         expect(comp.pensionsCollection).toContain(pension);
-        expect(comp.receipientsCollection).toContain(receipient);
+        expect(comp.recipientsCollection).toContain(recipient);
       });
     });
 

@@ -8,6 +8,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.dsirc.tests.IntegrationTest;
 import com.dsirc.tests.domain.Contact;
 import com.dsirc.tests.repository.ContactRepository;
+import com.dsirc.tests.service.dto.ContactDTO;
+import com.dsirc.tests.service.mapper.ContactMapper;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
@@ -43,6 +45,9 @@ class ContactResourceIT {
 
     @Autowired
     private ContactRepository contactRepository;
+
+    @Autowired
+    private ContactMapper contactMapper;
 
     @Autowired
     private EntityManager em;
@@ -84,8 +89,9 @@ class ContactResourceIT {
     void createContact() throws Exception {
         int databaseSizeBeforeCreate = contactRepository.findAll().size();
         // Create the Contact
+        ContactDTO contactDTO = contactMapper.toDto(contact);
         restContactMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(contact)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(contactDTO)))
             .andExpect(status().isCreated());
 
         // Validate the Contact in the database
@@ -101,12 +107,13 @@ class ContactResourceIT {
     void createContactWithExistingId() throws Exception {
         // Create the Contact with an existing ID
         contact.setId(1L);
+        ContactDTO contactDTO = contactMapper.toDto(contact);
 
         int databaseSizeBeforeCreate = contactRepository.findAll().size();
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restContactMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(contact)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(contactDTO)))
             .andExpect(status().isBadRequest());
 
         // Validate the Contact in the database
@@ -122,9 +129,10 @@ class ContactResourceIT {
         contact.setEmail(null);
 
         // Create the Contact, which fails.
+        ContactDTO contactDTO = contactMapper.toDto(contact);
 
         restContactMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(contact)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(contactDTO)))
             .andExpect(status().isBadRequest());
 
         List<Contact> contactList = contactRepository.findAll();
@@ -139,9 +147,10 @@ class ContactResourceIT {
         contact.setPhone(null);
 
         // Create the Contact, which fails.
+        ContactDTO contactDTO = contactMapper.toDto(contact);
 
         restContactMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(contact)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(contactDTO)))
             .andExpect(status().isBadRequest());
 
         List<Contact> contactList = contactRepository.findAll();
@@ -200,12 +209,13 @@ class ContactResourceIT {
         // Disconnect from session so that the updates on updatedContact are not directly saved in db
         em.detach(updatedContact);
         updatedContact.email(UPDATED_EMAIL).phone(UPDATED_PHONE);
+        ContactDTO contactDTO = contactMapper.toDto(updatedContact);
 
         restContactMockMvc
             .perform(
-                put(ENTITY_API_URL_ID, updatedContact.getId())
+                put(ENTITY_API_URL_ID, contactDTO.getId())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(updatedContact))
+                    .content(TestUtil.convertObjectToJsonBytes(contactDTO))
             )
             .andExpect(status().isOk());
 
@@ -223,12 +233,15 @@ class ContactResourceIT {
         int databaseSizeBeforeUpdate = contactRepository.findAll().size();
         contact.setId(count.incrementAndGet());
 
+        // Create the Contact
+        ContactDTO contactDTO = contactMapper.toDto(contact);
+
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restContactMockMvc
             .perform(
-                put(ENTITY_API_URL_ID, contact.getId())
+                put(ENTITY_API_URL_ID, contactDTO.getId())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(contact))
+                    .content(TestUtil.convertObjectToJsonBytes(contactDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -243,12 +256,15 @@ class ContactResourceIT {
         int databaseSizeBeforeUpdate = contactRepository.findAll().size();
         contact.setId(count.incrementAndGet());
 
+        // Create the Contact
+        ContactDTO contactDTO = contactMapper.toDto(contact);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restContactMockMvc
             .perform(
                 put(ENTITY_API_URL_ID, count.incrementAndGet())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(contact))
+                    .content(TestUtil.convertObjectToJsonBytes(contactDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -263,9 +279,12 @@ class ContactResourceIT {
         int databaseSizeBeforeUpdate = contactRepository.findAll().size();
         contact.setId(count.incrementAndGet());
 
+        // Create the Contact
+        ContactDTO contactDTO = contactMapper.toDto(contact);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restContactMockMvc
-            .perform(put(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(contact)))
+            .perform(put(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(contactDTO)))
             .andExpect(status().isMethodNotAllowed());
 
         // Validate the Contact in the database
@@ -337,12 +356,15 @@ class ContactResourceIT {
         int databaseSizeBeforeUpdate = contactRepository.findAll().size();
         contact.setId(count.incrementAndGet());
 
+        // Create the Contact
+        ContactDTO contactDTO = contactMapper.toDto(contact);
+
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restContactMockMvc
             .perform(
-                patch(ENTITY_API_URL_ID, contact.getId())
+                patch(ENTITY_API_URL_ID, contactDTO.getId())
                     .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(contact))
+                    .content(TestUtil.convertObjectToJsonBytes(contactDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -357,12 +379,15 @@ class ContactResourceIT {
         int databaseSizeBeforeUpdate = contactRepository.findAll().size();
         contact.setId(count.incrementAndGet());
 
+        // Create the Contact
+        ContactDTO contactDTO = contactMapper.toDto(contact);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restContactMockMvc
             .perform(
                 patch(ENTITY_API_URL_ID, count.incrementAndGet())
                     .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(contact))
+                    .content(TestUtil.convertObjectToJsonBytes(contactDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -377,9 +402,14 @@ class ContactResourceIT {
         int databaseSizeBeforeUpdate = contactRepository.findAll().size();
         contact.setId(count.incrementAndGet());
 
+        // Create the Contact
+        ContactDTO contactDTO = contactMapper.toDto(contact);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restContactMockMvc
-            .perform(patch(ENTITY_API_URL).contentType("application/merge-patch+json").content(TestUtil.convertObjectToJsonBytes(contact)))
+            .perform(
+                patch(ENTITY_API_URL).contentType("application/merge-patch+json").content(TestUtil.convertObjectToJsonBytes(contactDTO))
+            )
             .andExpect(status().isMethodNotAllowed());
 
         // Validate the Contact in the database

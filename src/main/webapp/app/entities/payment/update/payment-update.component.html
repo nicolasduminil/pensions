@@ -88,12 +88,12 @@
         </div>
 
         <div class="form-group">
-          <label class="form-control-label" jhiTranslate="pensionsApp.payment.receipient" for="field_receipient">Receipient</label>
-          <select class="form-control" id="field_receipient" data-cy="receipient" name="receipient" formControlName="receipient">
+          <label class="form-control-label" jhiTranslate="pensionsApp.payment.recipient" for="field_recipient">Recipient</label>
+          <select class="form-control" id="field_recipient" data-cy="recipient" name="recipient" formControlName="recipient">
             <option [ngValue]="null"></option>
             <option
-              [ngValue]="recipientOption.id === editForm.get('receipient')!.value?.id ? editForm.get('receipient')!.value : recipientOption"
-              *ngFor="let recipientOption of receipientsCollection; trackBy: trackRecipientById"
+              [ngValue]="recipientOption.id === editForm.get('recipient')!.value?.id ? editForm.get('recipient')!.value : recipientOption"
+              *ngFor="let recipientOption of recipientsCollection; trackBy: trackRecipientById"
             >
               {{ recipientOption.id }}
             </option>

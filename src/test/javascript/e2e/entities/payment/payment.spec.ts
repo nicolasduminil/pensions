@@ -46,7 +46,7 @@ describe('Payment e2e test', () => {
       paymentUpdatePage.paymentsStatusSelectLastOption(),
       paymentUpdatePage.setPaymentDateInput('2000-12-31'),
       paymentUpdatePage.pensionSelectLastOption(),
-      paymentUpdatePage.receipientSelectLastOption(),
+      paymentUpdatePage.recipientSelectLastOption(),
     ]);
 
     await paymentUpdatePage.save();

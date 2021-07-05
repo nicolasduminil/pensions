@@ -8,7 +8,7 @@ export interface IPayment {
   paymentsStatus?: PaymentStatus;
   paymentDate?: dayjs.Dayjs;
   pension?: IPension | null;
-  receipient?: IRecipient | null;
+  recipient?: IRecipient | null;
 }
 
 export class Payment implements IPayment {
@@ -17,7 +17,7 @@ export class Payment implements IPayment {
     public paymentsStatus?: PaymentStatus,
     public paymentDate?: dayjs.Dayjs,
     public pension?: IPension | null,
-    public receipient?: IRecipient | null
+    public recipient?: IRecipient | null
   ) {}
 }
 

@@ -20,14 +20,14 @@ export class PaymentUpdateComponent implements OnInit {
   isSaving = false;
 
   pensionsCollection: IPension[] = [];
-  receipientsCollection: IRecipient[] = [];
+  recipientsCollection: IRecipient[] = [];
 
   editForm = this.fb.group({
     id: [],
     paymentsStatus: [null, [Validators.required]],
     paymentDate: [null, [Validators.required]],
     pension: [],
-    receipient: [],
+    recipient: [],
   });
 
   constructor(
@@ -93,11 +93,11 @@ export class PaymentUpdateComponent implements OnInit {
       paymentsStatus: payment.paymentsStatus,
       paymentDate: payment.paymentDate,
       pension: payment.pension,
-      receipient: payment.receipient,
+      recipient: payment.recipient,
     });
 
     this.pensionsCollection = this.pensionService.addPensionToCollectionIfMissing(this.pensionsCollection, payment.pension);
-    this.receipientsCollection = this.recipientService.addRecipientToCollectionIfMissing(this.receipientsCollection, payment.receipient);
+    this.recipientsCollection = this.recipientService.addRecipientToCollectionIfMissing(this.recipientsCollection, payment.recipient);
   }
 
   protected loadRelationshipsOptions(): void {
@@ -114,10 +114,10 @@ export class PaymentUpdateComponent implements OnInit {
       .pipe(map((res: HttpResponse<IRecipient[]>) => res.body ?? []))
       .pipe(
         map((recipients: IRecipient[]) =>
-          this.recipientService.addRecipientToCollectionIfMissing(recipients, this.editForm.get('receipient')!.value)
+          this.recipientService.addRecipientToCollectionIfMissing(recipients, this.editForm.get('recipient')!.value)
         )
       )
-      .subscribe((recipients: IRecipient[]) => (this.receipientsCollection = recipients));
+      .subscribe((recipients: IRecipient[]) => (this.recipientsCollection = recipients));
   }
 
   protected createFromForm(): IPayment {
@@ -127,7 +127,7 @@ export class PaymentUpdateComponent implements OnInit {
       paymentsStatus: this.editForm.get(['paymentsStatus'])!.value,
       paymentDate: this.editForm.get(['paymentDate'])!.value,
       pension: this.editForm.get(['pension'])!.value,
-      receipient: this.editForm.get(['receipient'])!.value,
+      recipient: this.editForm.get(['recipient'])!.value,
     };
   }
 }

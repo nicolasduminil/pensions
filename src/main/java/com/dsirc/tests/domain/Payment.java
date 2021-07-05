@@ -2,7 +2,6 @@ package com.dsirc.tests.domain;
 
 import com.dsirc.tests.domain.enumeration.PaymentStatus;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import io.swagger.annotations.ApiModel;
 import java.io.Serializable;
 import java.time.LocalDate;
 import javax.persistence.*;
@@ -13,7 +12,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 /**
  * Pension Payment
  */
-@ApiModel(description = "Pension Payment")
 @Entity
 @Table(name = "payment")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -35,15 +33,15 @@ public class Payment implements Serializable {
     @Column(name = "payment_date", nullable = false)
     private LocalDate paymentDate;
 
-    @JsonIgnoreProperties(value = { "recipient" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "recipient", "payment" }, allowSetters = true)
     @OneToOne
     @JoinColumn(unique = true)
     private Pension pension;
 
-    @JsonIgnoreProperties(value = { "addresses", "contacts", "pension" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "addresses", "contacts", "pension", "payment" }, allowSetters = true)
     @OneToOne
     @JoinColumn(unique = true)
-    private Recipient receipient;
+    private Recipient recipient;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -98,17 +96,17 @@ public class Payment implements Serializable {
         this.pension = pension;
     }
 
-    public Recipient getReceipient() {
-        return this.receipient;
+    public Recipient getRecipient() {
+        return this.recipient;
     }
 
-    public Payment receipient(Recipient recipient) {
-        this.setReceipient(recipient);
+    public Payment recipient(Recipient recipient) {
+        this.setRecipient(recipient);
         return this;
     }
 
-    public void setReceipient(Recipient recipient) {
-        this.receipient = recipient;
+    public void setRecipient(Recipient recipient) {
+        this.recipient = recipient;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

@@ -14,9 +14,9 @@
                                  referencedColumnNames="id"
                                  referencedTableName="pension"/>
 
-        <addForeignKeyConstraint baseColumnNames="receipient_id"
+        <addForeignKeyConstraint baseColumnNames="recipient_id"
                                  baseTableName="payment"
-                                 constraintName="fk_payment__receipient_id"
+                                 constraintName="fk_payment__recipient_id"
                                  referencedColumnNames="id"
                                  referencedTableName="recipient"/>
     </changeSet>

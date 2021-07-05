@@ -2,6 +2,7 @@ import * as dayjs from 'dayjs';
 import { IAddress } from 'app/entities/address/address.model';
 import { IContact } from 'app/entities/contact/contact.model';
 import { IPension } from 'app/entities/pension/pension.model';
+import { IPayment } from 'app/entities/payment/payment.model';
 import { Gender } from 'app/entities/enumerations/gender.model';
 
 export interface IRecipient {
@@ -13,6 +14,7 @@ export interface IRecipient {
   addresses?: IAddress[] | null;
   contacts?: IContact[] | null;
   pension?: IPension | null;
+  payment?: IPayment | null;
 }
 
 export class Recipient implements IRecipient {
@@ -24,7 +26,8 @@ export class Recipient implements IRecipient {
     public gender?: Gender,
     public addresses?: IAddress[] | null,
     public contacts?: IContact[] | null,
-    public pension?: IPension | null
+    public pension?: IPension | null,
+    public payment?: IPayment | null
   ) {}
 }
 

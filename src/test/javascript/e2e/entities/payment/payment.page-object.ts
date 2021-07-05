@@ -34,7 +34,7 @@ export class PaymentUpdatePage {
   paymentDateInput = element(by.id('field_paymentDate'));
 
   pensionSelect = element(by.id('field_pension'));
-  receipientSelect = element(by.id('field_receipient'));
+  recipientSelect = element(by.id('field_recipient'));
 
   async getPageTitle(): Promise<string> {
     return this.pageTitle.getAttribute('jhiTranslate');
@@ -84,20 +84,20 @@ export class PaymentUpdatePage {
     return await this.pensionSelect.element(by.css('option:checked')).getText();
   }
 
-  async receipientSelectLastOption(): Promise<void> {
-    await this.receipientSelect.all(by.tagName('option')).last().click();
+  async recipientSelectLastOption(): Promise<void> {
+    await this.recipientSelect.all(by.tagName('option')).last().click();
   }
 
-  async receipientSelectOption(option: string): Promise<void> {
-    await this.receipientSelect.sendKeys(option);
+  async recipientSelectOption(option: string): Promise<void> {
+    await this.recipientSelect.sendKeys(option);
   }
 
-  getReceipientSelect(): ElementFinder {
-    return this.receipientSelect;
+  getRecipientSelect(): ElementFinder {
+    return this.recipientSelect;
   }
 
-  async getReceipientSelectedOption(): Promise<string> {
-    return await this.receipientSelect.element(by.css('option:checked')).getText();
+  async getRecipientSelectedOption(): Promise<string> {
+    return await this.recipientSelect.element(by.css('option:checked')).getText();
   }
 
   async save(): Promise<void> {

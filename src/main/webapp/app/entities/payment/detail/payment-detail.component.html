@@ -28,10 +28,10 @@
             <a [routerLink]="['/pension', payment.pension?.id, 'view']">{{ payment.pension?.id }}</a>
           </div>
         </dd>
-        <dt><span jhiTranslate="pensionsApp.payment.receipient">Receipient</span></dt>
+        <dt><span jhiTranslate="pensionsApp.payment.recipient">Recipient</span></dt>
         <dd>
-          <div *ngIf="payment.receipient">
-            <a [routerLink]="['/recipient', payment.receipient?.id, 'view']">{{ payment.receipient?.id }}</a>
+          <div *ngIf="payment.recipient">
+            <a [routerLink]="['/recipient', payment.recipient?.id, 'view']">{{ payment.recipient?.id }}</a>
           </div>
         </dd>
       </dl>

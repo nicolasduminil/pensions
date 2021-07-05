@@ -22,7 +22,8 @@
       "startingDate": "Starting Date",
       "paymentMethod": "Payment Method",
       "amount": "Amount",
-      "recipient": "Recipient"
+      "recipient": "Recipient",
+      "payment": "Payment"
     }
   }
 }

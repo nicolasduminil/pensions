@@ -1,5 +1,6 @@
 import * as dayjs from 'dayjs';
 import { IRecipient } from 'app/entities/recipient/recipient.model';
+import { IPayment } from 'app/entities/payment/payment.model';
 import { PensionType } from 'app/entities/enumerations/pension-type.model';
 import { PaymentMethod } from 'app/entities/enumerations/payment-method.model';
 
@@ -10,6 +11,7 @@ export interface IPension {
   paymentMethod?: PaymentMethod;
   amount?: number;
   recipient?: IRecipient | null;
+  payment?: IPayment | null;
 }
 
 export class Pension implements IPension {
@@ -19,7 +21,8 @@ export class Pension implements IPension {
     public startingDate?: dayjs.Dayjs,
     public paymentMethod?: PaymentMethod,
     public amount?: number,
-    public recipient?: IRecipient | null
+    public recipient?: IRecipient | null,
+    public payment?: IPayment | null
   ) {}
 }
 

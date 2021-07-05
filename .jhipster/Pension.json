@@ -31,13 +31,20 @@
       "otherEntityRelationshipName": "pension",
       "relationshipName": "recipient",
       "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "payment",
+      "otherEntityRelationshipName": "pension",
+      "relationshipName": "payment",
+      "ownerSide": false
     }
   ],
   "javadoc": "Recipient Pension",
   "entityTableName": "pension",
-  "dto": "no",
+  "dto": "mapstruct",
   "pagination": "pagination",
-  "service": "serviceClass",
+  "service": "serviceImpl",
   "jpaMetamodelFiltering": false,
   "fluentMethods": true,
   "readOnly": false,

@@ -2,7 +2,6 @@ package com.dsirc.tests.domain;
 
 import com.dsirc.tests.domain.enumeration.Gender;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import io.swagger.annotations.ApiModel;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -15,7 +14,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 /**
  * Recipient entitled to Pension
  */
-@ApiModel(description = "Recipient entitled to Pension")
 @Entity
 @Table(name = "recipient")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -55,9 +53,13 @@ public class Recipient implements Serializable {
     @JsonIgnoreProperties(value = { "recipient" }, allowSetters = true)
     private Set<Contact> contacts = new HashSet<>();
 
-    @JsonIgnoreProperties(value = { "recipient" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "recipient", "payment" }, allowSetters = true)
     @OneToOne(mappedBy = "recipient")
     private Pension pension;
+
+    @JsonIgnoreProperties(value = { "pension", "recipient" }, allowSetters = true)
+    @OneToOne(mappedBy = "recipient")
+    private Payment payment;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -204,6 +206,25 @@ public class Recipient implements Serializable {
             pension.setRecipient(this);
         }
         this.pension = pension;
+    }
+
+    public Payment getPayment() {
+        return this.payment;
+    }
+
+    public Recipient payment(Payment payment) {
+        this.setPayment(payment);
+        return this;
+    }
+
+    public void setPayment(Payment payment) {
+        if (this.payment != null) {
+            this.payment.setRecipient(null);
+        }
+        if (payment != null) {
+            payment.setRecipient(this);
+        }
+        this.payment = payment;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

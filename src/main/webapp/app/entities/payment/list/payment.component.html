@@ -42,8 +42,8 @@
           <th scope="col" jhiSortBy="pension.id">
             <span jhiTranslate="pensionsApp.payment.pension">Pension</span> <fa-icon icon="sort"></fa-icon>
           </th>
-          <th scope="col" jhiSortBy="receipient.id">
-            <span jhiTranslate="pensionsApp.payment.receipient">Receipient</span> <fa-icon icon="sort"></fa-icon>
+          <th scope="col" jhiSortBy="recipient.id">
+            <span jhiTranslate="pensionsApp.payment.recipient">Recipient</span> <fa-icon icon="sort"></fa-icon>
           </th>
           <th scope="col"></th>
         </tr>
@@ -61,8 +61,8 @@
             </div>
           </td>
           <td>
-            <div *ngIf="payment.receipient">
-              <a [routerLink]="['/recipient', payment.receipient?.id, 'view']">{{ payment.receipient?.id }}</a>
+            <div *ngIf="payment.recipient">
+              <a [routerLink]="['/recipient', payment.recipient?.id, 'view']">{{ payment.recipient?.id }}</a>
             </div>
           </td>
           <td class="text-right">

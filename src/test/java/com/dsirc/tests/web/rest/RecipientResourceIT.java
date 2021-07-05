@@ -9,6 +9,8 @@ import com.dsirc.tests.IntegrationTest;
 import com.dsirc.tests.domain.Recipient;
 import com.dsirc.tests.domain.enumeration.Gender;
 import com.dsirc.tests.repository.RecipientRepository;
+import com.dsirc.tests.service.dto.RecipientDTO;
+import com.dsirc.tests.service.mapper.RecipientMapper;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.List;
@@ -52,6 +54,9 @@ class RecipientResourceIT {
 
     @Autowired
     private RecipientRepository recipientRepository;
+
+    @Autowired
+    private RecipientMapper recipientMapper;
 
     @Autowired
     private EntityManager em;
@@ -101,8 +106,9 @@ class RecipientResourceIT {
     void createRecipient() throws Exception {
         int databaseSizeBeforeCreate = recipientRepository.findAll().size();
         // Create the Recipient
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
         restRecipientMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipient)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipientDTO)))
             .andExpect(status().isCreated());
 
         // Validate the Recipient in the database
@@ -120,12 +126,13 @@ class RecipientResourceIT {
     void createRecipientWithExistingId() throws Exception {
         // Create the Recipient with an existing ID
         recipient.setId(1L);
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
 
         int databaseSizeBeforeCreate = recipientRepository.findAll().size();
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restRecipientMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipient)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipientDTO)))
             .andExpect(status().isBadRequest());
 
         // Validate the Recipient in the database
@@ -141,9 +148,10 @@ class RecipientResourceIT {
         recipient.setFirstName(null);
 
         // Create the Recipient, which fails.
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
 
         restRecipientMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipient)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipientDTO)))
             .andExpect(status().isBadRequest());
 
         List<Recipient> recipientList = recipientRepository.findAll();
@@ -158,9 +166,10 @@ class RecipientResourceIT {
         recipient.setLastName(null);
 
         // Create the Recipient, which fails.
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
 
         restRecipientMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipient)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipientDTO)))
             .andExpect(status().isBadRequest());
 
         List<Recipient> recipientList = recipientRepository.findAll();
@@ -175,9 +184,10 @@ class RecipientResourceIT {
         recipient.setBirthDate(null);
 
         // Create the Recipient, which fails.
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
 
         restRecipientMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipient)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipientDTO)))
             .andExpect(status().isBadRequest());
 
         List<Recipient> recipientList = recipientRepository.findAll();
@@ -192,9 +202,10 @@ class RecipientResourceIT {
         recipient.setGender(null);
 
         // Create the Recipient, which fails.
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
 
         restRecipientMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipient)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipientDTO)))
             .andExpect(status().isBadRequest());
 
         List<Recipient> recipientList = recipientRepository.findAll();
@@ -257,12 +268,13 @@ class RecipientResourceIT {
         // Disconnect from session so that the updates on updatedRecipient are not directly saved in db
         em.detach(updatedRecipient);
         updatedRecipient.firstName(UPDATED_FIRST_NAME).lastName(UPDATED_LAST_NAME).birthDate(UPDATED_BIRTH_DATE).gender(UPDATED_GENDER);
+        RecipientDTO recipientDTO = recipientMapper.toDto(updatedRecipient);
 
         restRecipientMockMvc
             .perform(
-                put(ENTITY_API_URL_ID, updatedRecipient.getId())
+                put(ENTITY_API_URL_ID, recipientDTO.getId())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(updatedRecipient))
+                    .content(TestUtil.convertObjectToJsonBytes(recipientDTO))
             )
             .andExpect(status().isOk());
 
@@ -282,12 +294,15 @@ class RecipientResourceIT {
         int databaseSizeBeforeUpdate = recipientRepository.findAll().size();
         recipient.setId(count.incrementAndGet());
 
+        // Create the Recipient
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
+
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restRecipientMockMvc
             .perform(
-                put(ENTITY_API_URL_ID, recipient.getId())
+                put(ENTITY_API_URL_ID, recipientDTO.getId())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(recipient))
+                    .content(TestUtil.convertObjectToJsonBytes(recipientDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -302,12 +317,15 @@ class RecipientResourceIT {
         int databaseSizeBeforeUpdate = recipientRepository.findAll().size();
         recipient.setId(count.incrementAndGet());
 
+        // Create the Recipient
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restRecipientMockMvc
             .perform(
                 put(ENTITY_API_URL_ID, count.incrementAndGet())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(recipient))
+                    .content(TestUtil.convertObjectToJsonBytes(recipientDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -322,9 +340,12 @@ class RecipientResourceIT {
         int databaseSizeBeforeUpdate = recipientRepository.findAll().size();
         recipient.setId(count.incrementAndGet());
 
+        // Create the Recipient
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restRecipientMockMvc
-            .perform(put(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipient)))
+            .perform(put(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(recipientDTO)))
             .andExpect(status().isMethodNotAllowed());
 
         // Validate the Recipient in the database
@@ -404,12 +425,15 @@ class RecipientResourceIT {
         int databaseSizeBeforeUpdate = recipientRepository.findAll().size();
         recipient.setId(count.incrementAndGet());
 
+        // Create the Recipient
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
+
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restRecipientMockMvc
             .perform(
-                patch(ENTITY_API_URL_ID, recipient.getId())
+                patch(ENTITY_API_URL_ID, recipientDTO.getId())
                     .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(recipient))
+                    .content(TestUtil.convertObjectToJsonBytes(recipientDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -424,12 +448,15 @@ class RecipientResourceIT {
         int databaseSizeBeforeUpdate = recipientRepository.findAll().size();
         recipient.setId(count.incrementAndGet());
 
+        // Create the Recipient
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restRecipientMockMvc
             .perform(
                 patch(ENTITY_API_URL_ID, count.incrementAndGet())
                     .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(recipient))
+                    .content(TestUtil.convertObjectToJsonBytes(recipientDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -444,10 +471,13 @@ class RecipientResourceIT {
         int databaseSizeBeforeUpdate = recipientRepository.findAll().size();
         recipient.setId(count.incrementAndGet());
 
+        // Create the Recipient
+        RecipientDTO recipientDTO = recipientMapper.toDto(recipient);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restRecipientMockMvc
             .perform(
-                patch(ENTITY_API_URL).contentType("application/merge-patch+json").content(TestUtil.convertObjectToJsonBytes(recipient))
+                patch(ENTITY_API_URL).contentType("application/merge-patch+json").content(TestUtil.convertObjectToJsonBytes(recipientDTO))
             )
             .andExpect(status().isMethodNotAllowed());
 

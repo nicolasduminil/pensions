@@ -43,7 +43,7 @@ describe('Contact e2e test', () => {
     await contactComponentsPage.clickOnCreateButton();
 
     await promise.all([
-      contactUpdatePage.setEmailInput('MZ1El@9ql5U.%!'),
+      contactUpdatePage.setEmailInput('|?V?#_@q}*l&#34;q.j'),
       contactUpdatePage.setPhoneInput('phone'),
       contactUpdatePage.recipientSelectLastOption(),
     ]);

@@ -11,6 +11,8 @@ import com.dsirc.tests.domain.Pension;
 import com.dsirc.tests.domain.enumeration.PaymentMethod;
 import com.dsirc.tests.domain.enumeration.PensionType;
 import com.dsirc.tests.repository.PensionRepository;
+import com.dsirc.tests.service.dto.PensionDTO;
+import com.dsirc.tests.service.mapper.PensionMapper;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -55,6 +57,9 @@ class PensionResourceIT {
 
     @Autowired
     private PensionRepository pensionRepository;
+
+    @Autowired
+    private PensionMapper pensionMapper;
 
     @Autowired
     private EntityManager em;
@@ -104,8 +109,9 @@ class PensionResourceIT {
     void createPension() throws Exception {
         int databaseSizeBeforeCreate = pensionRepository.findAll().size();
         // Create the Pension
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
         restPensionMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pension)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pensionDTO)))
             .andExpect(status().isCreated());
 
         // Validate the Pension in the database
@@ -123,12 +129,13 @@ class PensionResourceIT {
     void createPensionWithExistingId() throws Exception {
         // Create the Pension with an existing ID
         pension.setId(1L);
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
 
         int databaseSizeBeforeCreate = pensionRepository.findAll().size();
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restPensionMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pension)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pensionDTO)))
             .andExpect(status().isBadRequest());
 
         // Validate the Pension in the database
@@ -144,9 +151,10 @@ class PensionResourceIT {
         pension.setPensionType(null);
 
         // Create the Pension, which fails.
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
 
         restPensionMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pension)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pensionDTO)))
             .andExpect(status().isBadRequest());
 
         List<Pension> pensionList = pensionRepository.findAll();
@@ -161,9 +169,10 @@ class PensionResourceIT {
         pension.setStartingDate(null);
 
         // Create the Pension, which fails.
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
 
         restPensionMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pension)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pensionDTO)))
             .andExpect(status().isBadRequest());
 
         List<Pension> pensionList = pensionRepository.findAll();
@@ -178,9 +187,10 @@ class PensionResourceIT {
         pension.setPaymentMethod(null);
 
         // Create the Pension, which fails.
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
 
         restPensionMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pension)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pensionDTO)))
             .andExpect(status().isBadRequest());
 
         List<Pension> pensionList = pensionRepository.findAll();
@@ -195,9 +205,10 @@ class PensionResourceIT {
         pension.setAmount(null);
 
         // Create the Pension, which fails.
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
 
         restPensionMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pension)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pensionDTO)))
             .andExpect(status().isBadRequest());
 
         List<Pension> pensionList = pensionRepository.findAll();
@@ -264,12 +275,13 @@ class PensionResourceIT {
             .startingDate(UPDATED_STARTING_DATE)
             .paymentMethod(UPDATED_PAYMENT_METHOD)
             .amount(UPDATED_AMOUNT);
+        PensionDTO pensionDTO = pensionMapper.toDto(updatedPension);
 
         restPensionMockMvc
             .perform(
-                put(ENTITY_API_URL_ID, updatedPension.getId())
+                put(ENTITY_API_URL_ID, pensionDTO.getId())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(updatedPension))
+                    .content(TestUtil.convertObjectToJsonBytes(pensionDTO))
             )
             .andExpect(status().isOk());
 
@@ -289,12 +301,15 @@ class PensionResourceIT {
         int databaseSizeBeforeUpdate = pensionRepository.findAll().size();
         pension.setId(count.incrementAndGet());
 
+        // Create the Pension
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
+
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restPensionMockMvc
             .perform(
-                put(ENTITY_API_URL_ID, pension.getId())
+                put(ENTITY_API_URL_ID, pensionDTO.getId())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(pension))
+                    .content(TestUtil.convertObjectToJsonBytes(pensionDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -309,12 +324,15 @@ class PensionResourceIT {
         int databaseSizeBeforeUpdate = pensionRepository.findAll().size();
         pension.setId(count.incrementAndGet());
 
+        // Create the Pension
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restPensionMockMvc
             .perform(
                 put(ENTITY_API_URL_ID, count.incrementAndGet())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(pension))
+                    .content(TestUtil.convertObjectToJsonBytes(pensionDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -329,9 +347,12 @@ class PensionResourceIT {
         int databaseSizeBeforeUpdate = pensionRepository.findAll().size();
         pension.setId(count.incrementAndGet());
 
+        // Create the Pension
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restPensionMockMvc
-            .perform(put(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pension)))
+            .perform(put(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(pensionDTO)))
             .andExpect(status().isMethodNotAllowed());
 
         // Validate the Pension in the database
@@ -413,12 +434,15 @@ class PensionResourceIT {
         int databaseSizeBeforeUpdate = pensionRepository.findAll().size();
         pension.setId(count.incrementAndGet());
 
+        // Create the Pension
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
+
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restPensionMockMvc
             .perform(
-                patch(ENTITY_API_URL_ID, pension.getId())
+                patch(ENTITY_API_URL_ID, pensionDTO.getId())
                     .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(pension))
+                    .content(TestUtil.convertObjectToJsonBytes(pensionDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -433,12 +457,15 @@ class PensionResourceIT {
         int databaseSizeBeforeUpdate = pensionRepository.findAll().size();
         pension.setId(count.incrementAndGet());
 
+        // Create the Pension
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restPensionMockMvc
             .perform(
                 patch(ENTITY_API_URL_ID, count.incrementAndGet())
                     .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(pension))
+                    .content(TestUtil.convertObjectToJsonBytes(pensionDTO))
             )
             .andExpect(status().isBadRequest());
 
@@ -453,9 +480,14 @@ class PensionResourceIT {
         int databaseSizeBeforeUpdate = pensionRepository.findAll().size();
         pension.setId(count.incrementAndGet());
 
+        // Create the Pension
+        PensionDTO pensionDTO = pensionMapper.toDto(pension);
+
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restPensionMockMvc
-            .perform(patch(ENTITY_API_URL).contentType("application/merge-patch+json").content(TestUtil.convertObjectToJsonBytes(pension)))
+            .perform(
+                patch(ENTITY_API_URL).contentType("application/merge-patch+json").content(TestUtil.convertObjectToJsonBytes(pensionDTO))
+            )
             .andExpect(status().isMethodNotAllowed());
 
         // Validate the Pension in the database

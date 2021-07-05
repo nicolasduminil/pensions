@@ -1,8 +1,8 @@
 package com.dsirc.tests.web.rest;
 
-import com.dsirc.tests.domain.Recipient;
 import com.dsirc.tests.repository.RecipientRepository;
 import com.dsirc.tests.service.RecipientService;
+import com.dsirc.tests.service.dto.RecipientDTO;
 import com.dsirc.tests.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -52,17 +52,17 @@ public class RecipientResource {
     /**
      * {@code POST  /recipients} : Create a new recipient.
      *
-     * @param recipient the recipient to create.
-     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new recipient, or with status {@code 400 (Bad Request)} if the recipient has already an ID.
+     * @param recipientDTO the recipientDTO to create.
+     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new recipientDTO, or with status {@code 400 (Bad Request)} if the recipient has already an ID.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("/recipients")
-    public ResponseEntity<Recipient> createRecipient(@Valid @RequestBody Recipient recipient) throws URISyntaxException {
-        log.debug("REST request to save Recipient : {}", recipient);
-        if (recipient.getId() != null) {
+    public ResponseEntity<RecipientDTO> createRecipient(@Valid @RequestBody RecipientDTO recipientDTO) throws URISyntaxException {
+        log.debug("REST request to save Recipient : {}", recipientDTO);
+        if (recipientDTO.getId() != null) {
             throw new BadRequestAlertException("A new recipient cannot already have an ID", ENTITY_NAME, "idexists");
         }
-        Recipient result = recipientService.save(recipient);
+        RecipientDTO result = recipientService.save(recipientDTO);
         return ResponseEntity
             .created(new URI("/api/recipients/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
@@ -72,23 +72,23 @@ public class RecipientResource {
     /**
      * {@code PUT  /recipients/:id} : Updates an existing recipient.
      *
-     * @param id the id of the recipient to save.
-     * @param recipient the recipient to update.
-     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated recipient,
-     * or with status {@code 400 (Bad Request)} if the recipient is not valid,
-     * or with status {@code 500 (Internal Server Error)} if the recipient couldn't be updated.
+     * @param id the id of the recipientDTO to save.
+     * @param recipientDTO the recipientDTO to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated recipientDTO,
+     * or with status {@code 400 (Bad Request)} if the recipientDTO is not valid,
+     * or with status {@code 500 (Internal Server Error)} if the recipientDTO couldn't be updated.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/recipients/{id}")
-    public ResponseEntity<Recipient> updateRecipient(
+    public ResponseEntity<RecipientDTO> updateRecipient(
         @PathVariable(value = "id", required = false) final Long id,
-        @Valid @RequestBody Recipient recipient
+        @Valid @RequestBody RecipientDTO recipientDTO
     ) throws URISyntaxException {
-        log.debug("REST request to update Recipient : {}, {}", id, recipient);
-        if (recipient.getId() == null) {
+        log.debug("REST request to update Recipient : {}, {}", id, recipientDTO);
+        if (recipientDTO.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        if (!Objects.equals(id, recipient.getId())) {
+        if (!Objects.equals(id, recipientDTO.getId())) {
             throw new BadRequestAlertException("Invalid ID", ENTITY_NAME, "idinvalid");
         }
 
@@ -96,34 +96,34 @@ public class RecipientResource {
             throw new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound");
         }
 
-        Recipient result = recipientService.save(recipient);
+        RecipientDTO result = recipientService.save(recipientDTO);
         return ResponseEntity
             .ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, recipient.getId().toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, recipientDTO.getId().toString()))
             .body(result);
     }
 
     /**
      * {@code PATCH  /recipients/:id} : Partial updates given fields of an existing recipient, field will ignore if it is null
      *
-     * @param id the id of the recipient to save.
-     * @param recipient the recipient to update.
-     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated recipient,
-     * or with status {@code 400 (Bad Request)} if the recipient is not valid,
-     * or with status {@code 404 (Not Found)} if the recipient is not found,
-     * or with status {@code 500 (Internal Server Error)} if the recipient couldn't be updated.
+     * @param id the id of the recipientDTO to save.
+     * @param recipientDTO the recipientDTO to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated recipientDTO,
+     * or with status {@code 400 (Bad Request)} if the recipientDTO is not valid,
+     * or with status {@code 404 (Not Found)} if the recipientDTO is not found,
+     * or with status {@code 500 (Internal Server Error)} if the recipientDTO couldn't be updated.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PatchMapping(value = "/recipients/{id}", consumes = "application/merge-patch+json")
-    public ResponseEntity<Recipient> partialUpdateRecipient(
+    public ResponseEntity<RecipientDTO> partialUpdateRecipient(
         @PathVariable(value = "id", required = false) final Long id,
-        @NotNull @RequestBody Recipient recipient
+        @NotNull @RequestBody RecipientDTO recipientDTO
     ) throws URISyntaxException {
-        log.debug("REST request to partial update Recipient partially : {}, {}", id, recipient);
-        if (recipient.getId() == null) {
+        log.debug("REST request to partial update Recipient partially : {}, {}", id, recipientDTO);
+        if (recipientDTO.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        if (!Objects.equals(id, recipient.getId())) {
+        if (!Objects.equals(id, recipientDTO.getId())) {
             throw new BadRequestAlertException("Invalid ID", ENTITY_NAME, "idinvalid");
         }
 
@@ -131,11 +131,11 @@ public class RecipientResource {
             throw new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound");
         }
 
-        Optional<Recipient> result = recipientService.partialUpdate(recipient);
+        Optional<RecipientDTO> result = recipientService.partialUpdate(recipientDTO);
 
         return ResponseUtil.wrapOrNotFound(
             result,
-            HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, recipient.getId().toString())
+            HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, recipientDTO.getId().toString())
         );
     }
 
@@ -147,13 +147,18 @@ public class RecipientResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of recipients in body.
      */
     @GetMapping("/recipients")
-    public ResponseEntity<List<Recipient>> getAllRecipients(Pageable pageable, @RequestParam(required = false) String filter) {
+    public ResponseEntity<List<RecipientDTO>> getAllRecipients(Pageable pageable, @RequestParam(required = false) String filter) {
         if ("pension-is-null".equals(filter)) {
             log.debug("REST request to get all Recipients where pension is null");
             return new ResponseEntity<>(recipientService.findAllWherePensionIsNull(), HttpStatus.OK);
         }
+
+        if ("payment-is-null".equals(filter)) {
+            log.debug("REST request to get all Recipients where payment is null");
+            return new ResponseEntity<>(recipientService.findAllWherePaymentIsNull(), HttpStatus.OK);
+        }
         log.debug("REST request to get a page of Recipients");
-        Page<Recipient> page = recipientService.findAll(pageable);
+        Page<RecipientDTO> page = recipientService.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
@@ -161,20 +166,20 @@ public class RecipientResource {
     /**
      * {@code GET  /recipients/:id} : get the "id" recipient.
      *
-     * @param id the id of the recipient to retrieve.
-     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the recipient, or with status {@code 404 (Not Found)}.
+     * @param id the id of the recipientDTO to retrieve.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the recipientDTO, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/recipients/{id}")
-    public ResponseEntity<Recipient> getRecipient(@PathVariable Long id) {
+    public ResponseEntity<RecipientDTO> getRecipient(@PathVariable Long id) {
         log.debug("REST request to get Recipient : {}", id);
-        Optional<Recipient> recipient = recipientService.findOne(id);
-        return ResponseUtil.wrapOrNotFound(recipient);
+        Optional<RecipientDTO> recipientDTO = recipientService.findOne(id);
+        return ResponseUtil.wrapOrNotFound(recipientDTO);
     }
 
     /**
      * {@code DELETE  /recipients/:id} : delete the "id" recipient.
      *
-     * @param id the id of the recipient to delete.
+     * @param id the id of the recipientDTO to delete.
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/recipients/{id}")

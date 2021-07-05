@@ -24,7 +24,8 @@
       "gender": "Gender",
       "address": "Address",
       "contact": "Contact",
-      "pension": "Pension"
+      "pension": "Pension",
+      "payment": "Payment"
     }
   }
 }

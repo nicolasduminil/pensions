@@ -1,0 +1,41 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="nicolas (generated)" id="1625159952226-7">
+        <addColumn tableName="payment">
+            <column name="recipient_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-8">
+        <addUniqueConstraint columnNames="recipient_id" constraintName="UC_PAYMENTRECIPIENT_ID_COL" tableName="payment"/>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-9">
+        <addForeignKeyConstraint baseColumnNames="recipient_id" baseTableName="payment" constraintName="FK3ilqcv8qhqe2anyiht7sjkn" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="recipient" validate="true"/>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-10">
+        <dropForeignKeyConstraint baseTableName="PAYMENT" constraintName="FK_PAYMENT__RECEIPIENT_ID"/>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-11">
+        <dropUniqueConstraint constraintName="UX_PAYMENT__RECEIPIENT_ID" tableName="PAYMENT"/>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-12">
+        <dropColumn columnName="RECEIPIENT_ID" tableName="PAYMENT"/>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-1">
+        <alterSequence incrementBy="50" sequenceName="sequence_generator"/>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-2">
+        <setTableRemarks tableName="address"/>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-3">
+        <setTableRemarks tableName="contact"/>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-4">
+        <setTableRemarks tableName="payment"/>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-5">
+        <setTableRemarks tableName="pension"/>
+    </changeSet>
+    <changeSet author="nicolas (generated)" id="1625159952226-6">
+        <setTableRemarks tableName="recipient"/>
+    </changeSet>
+</databaseChangeLog>
