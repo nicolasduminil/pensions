@@ -53,14 +53,14 @@ enum PaymentMethod {
 }
 
 relationship OneToOne {
-    Pension{recipient} to Recipient{pension},
+    Pension{recipient(lastName)} to Recipient{pension},
     Payment{pension} to Pension{payment},
     Payment{recipient} to Recipient{payment}
 }
 
 relationship OneToMany {
-   Recipient{address} to Address{recipient},
-   Recipient{contact} to Contact{recipient}
+   Recipient{address} to Address{recipient(lastName)},
+   Recipient{contact} to Contact{recipient(lastName)}
 }
 
 service * with serviceImpl

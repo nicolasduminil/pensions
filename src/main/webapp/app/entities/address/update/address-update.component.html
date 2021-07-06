@@ -80,7 +80,7 @@
               [ngValue]="recipientOption.id === editForm.get('recipient')!.value?.id ? editForm.get('recipient')!.value : recipientOption"
               *ngFor="let recipientOption of recipientsSharedCollection; trackBy: trackRecipientById"
             >
-              {{ recipientOption.id }}
+              {{ recipientOption.lastName }}
             </option>
           </select>
         </div>

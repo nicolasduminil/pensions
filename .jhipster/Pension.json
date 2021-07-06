@@ -30,6 +30,7 @@
       "otherEntityName": "recipient",
       "otherEntityRelationshipName": "pension",
       "relationshipName": "recipient",
+      "otherEntityField": "lastName",
       "ownerSide": true
     },
     {

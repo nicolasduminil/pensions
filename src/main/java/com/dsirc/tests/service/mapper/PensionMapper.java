@@ -9,7 +9,7 @@ import org.mapstruct.*;
  */
 @Mapper(componentModel = "spring", uses = { RecipientMapper.class })
 public interface PensionMapper extends EntityMapper<PensionDTO, Pension> {
-    @Mapping(target = "recipient", source = "recipient", qualifiedByName = "id")
+    @Mapping(target = "recipient", source = "recipient", qualifiedByName = "lastName")
     PensionDTO toDto(Pension s);
 
     @Named("id")

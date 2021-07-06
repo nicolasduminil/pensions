@@ -18,7 +18,8 @@
       "relationshipType": "many-to-one",
       "otherEntityName": "recipient",
       "otherEntityRelationshipName": "contact",
-      "relationshipName": "recipient"
+      "relationshipName": "recipient",
+      "otherEntityField": "lastName"
     }
   ],
   "javadoc": "Recipient Contact",

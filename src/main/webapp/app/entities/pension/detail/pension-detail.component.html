@@ -33,7 +33,7 @@
         <dt><span jhiTranslate="pensionsApp.pension.recipient">Recipient</span></dt>
         <dd>
           <div *ngIf="pension.recipient">
-            <a [routerLink]="['/recipient', pension.recipient?.id, 'view']">{{ pension.recipient?.id }}</a>
+            <a [routerLink]="['/recipient', pension.recipient?.id, 'view']">{{ pension.recipient?.lastName }}</a>
           </div>
         </dd>
       </dl>

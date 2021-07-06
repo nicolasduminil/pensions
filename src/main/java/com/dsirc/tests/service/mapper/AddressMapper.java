@@ -9,6 +9,6 @@ import org.mapstruct.*;
  */
 @Mapper(componentModel = "spring", uses = { RecipientMapper.class })
 public interface AddressMapper extends EntityMapper<AddressDTO, Address> {
-    @Mapping(target = "recipient", source = "recipient", qualifiedByName = "id")
+    @Mapping(target = "recipient", source = "recipient", qualifiedByName = "lastName")
     AddressDTO toDto(Address s);
 }
