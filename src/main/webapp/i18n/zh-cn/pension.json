@@ -1,0 +1,29 @@
+{
+  "pensionsApp": {
+    "pension": {
+      "home": {
+        "title": "Pensions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Pension",
+        "createOrEditLabel": "创建或编辑 Pension",
+        "notFound": "No Pensions found"
+      },
+      "created": "Pension {{ param }} 创建成功",
+      "updated": "Pension {{ param }} 更新成功",
+      "deleted": "Pension {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Pension {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Pension"
+      },
+      "id": "ID",
+      "pensionType": "Pension Type",
+      "startingDate": "Starting Date",
+      "paymentMethod": "Payment Method",
+      "amount": "Amount",
+      "recipient": "Recipient",
+      "payment": "Payment"
+    }
+  }
+}

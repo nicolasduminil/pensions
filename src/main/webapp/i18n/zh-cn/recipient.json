@@ -1,0 +1,31 @@
+{
+  "pensionsApp": {
+    "recipient": {
+      "home": {
+        "title": "Recipients",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Recipient",
+        "createOrEditLabel": "创建或编辑 Recipient",
+        "notFound": "No Recipients found"
+      },
+      "created": "Recipient {{ param }} 创建成功",
+      "updated": "Recipient {{ param }} 更新成功",
+      "deleted": "Recipient {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Recipient {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Recipient"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "birthDate": "Birth Date",
+      "gender": "Gender",
+      "address": "Address",
+      "contact": "Contact",
+      "pension": "Pension",
+      "payment": "Payment"
+    }
+  }
+}

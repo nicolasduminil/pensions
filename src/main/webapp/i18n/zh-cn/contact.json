@@ -1,0 +1,26 @@
+{
+  "pensionsApp": {
+    "contact": {
+      "home": {
+        "title": "Contacts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Contact",
+        "createOrEditLabel": "创建或编辑 Contact",
+        "notFound": "No Contacts found"
+      },
+      "created": "Contact {{ param }} 创建成功",
+      "updated": "Contact {{ param }} 更新成功",
+      "deleted": "Contact {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Contact {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Contact"
+      },
+      "id": "ID",
+      "email": "Email",
+      "phone": "Phone",
+      "recipient": "Recipient"
+    }
+  }
+}
