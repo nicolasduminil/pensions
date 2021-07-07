@@ -34,7 +34,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @IntegrationTest
 @AutoConfigureMockMvc
-@WithMockUser
+@WithMockUser(username = "admin", authorities = { "ROLE_ADMIN" }, password = "admin")
 class PensionResourceIT {
 
     private static final PensionType DEFAULT_PENSION_TYPE = PensionType.TYPE1;
